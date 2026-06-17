@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Feats</name>
-    <update version="0.3.1">
+    <update version="0.3.2">
       <file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
     </update>
   </info>
@@ -77,6 +77,7 @@
 	</element>
 
 	<element name="Intuitive Motion" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_INTUITIVE_MOTION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -194,6 +195,7 @@
 	</element>
 
 	<element name="Medical Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_MEDICAL_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make a Wisdom (Medicine) check or an ability check using a Herbalism Kit, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -320,6 +322,7 @@
 	</element>
 
 	<element name="Deductive Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_DEDUCTIVE_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -444,6 +447,7 @@
 	</element>
 
 	<element name="Hunter's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_HUNTERS_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make a Wisdom (Perception or Survival) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -569,6 +573,7 @@
 	</element>
 
 	<element name="Wild Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_WILD_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -699,6 +704,7 @@
 	</element>
 
 	<element name="Ever Hospitable" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_EVER_HOSPITABLE">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make a Charisma (Persuasion) check or an ability check using Brewer's Supplies or Cook's Utensils, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -822,6 +828,7 @@
 	</element>
 
 	<element name="Artisan's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_ARTISANS_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make an Intelligence (Arcana) check or an ability check using Artisan's Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -942,6 +949,7 @@
 	</element>
 
 	<element name="Gifted Scribe" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_GIFTED_SCRIBE">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make an Intelligence (History) check or an ability check using Calligrapher's Supplies, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -1065,6 +1073,7 @@
 	</element>
 
 	<element name="Sentinel's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_SENTINELS_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make a Wisdom (Insight or Perception) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -1192,6 +1201,7 @@
 	</element>
 
 	<element name="Cunning Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_CUNNING_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make a Dexterity (Stealth) or Charisma (Performance) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -1311,6 +1321,7 @@
 	</element>
 
 	<element name="Windwright's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_WINDWRIGHTS_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make a Dexterity (Acrobatics) check or an ability check using Navigator's Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -1447,6 +1458,7 @@
 	</element>
 
 	<element name="Warder's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDERS_INTUITION">
+		<requirements>!ID_ASRS_FEAT_POTENT_DRAGONMARK</requirements>
 		<compendium display="false" />
 		<description>
 			<p>When you make an Intelligence (Investigation) check or an ability check using Thieves' Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -1521,6 +1533,7 @@
 			<p class="flavor">General Feat (Prerequisite: Level 4+, Any Dragonmark Feat)</p>
 			<p>You gain the following benefits.</p>
 			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase the spellcasting ability score used by your Dragonmark feat by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Potent Mark.</i></b> The die rolled for your Dragonmark feat's ability check benefit increases from a d4 to a d6.</p>
 			<p class="indent"><b><i>Dragonmark Preparation.</i></b> You always have the spells on your Spells of the Mark list (if any) prepared.</p>
 			<p class="indent"><b><i>Dragonmark Spellcasting.</i></b> You have one extra spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a Short or Long Rest. You can use this spell slot to cast only a spell you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.</p>
 		</description>
@@ -1531,6 +1544,18 @@
 			<stat name="charisma" value="1" alt="Ability Score Increase (Potent Dragonmark)" requirements="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_CHARISMA" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_PREPARATION" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_SPELLCASTING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_INTUITIVE_MOTION" requirements="ID_ASRS_FEAT_MARK_OF_PASSAGE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_MEDICAL_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_HEALING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_DEDUCTIVE_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_DETECTION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_HUNTERS_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_FINDING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_WILD_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_HANDLING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_EVER_HOSPITABLE" requirements="ID_ASRS_FEAT_MARK_OF_HOSPITALITY" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_ARTISANS_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_MAKING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_GIFTED_SCRIBE" requirements="ID_ASRS_FEAT_MARK_OF_SCRIBING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_SENTINELS_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_SENTINEL" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_CUNNING_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_SHADOW" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_WINDWRIGHTS_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_STORM" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_WARDERS_INTUITION" requirements="ID_ASRS_FEAT_MARK_OF_WARDING" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_PASSAGE" requirements="ID_ASRS_FEAT_MARK_OF_PASSAGE" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_HEALING" requirements="ID_ASRS_FEAT_MARK_OF_HEALING" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_DETECTION" requirements="ID_ASRS_FEAT_MARK_OF_DETECTION" />
@@ -1569,6 +1594,125 @@
 		</sheet>
 	</element>
 
+	<element name="Potent Intuitive Motion" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_INTUITIVE_MOTION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Intuitive Motion">
+			<description>When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Medical Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_MEDICAL_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Wisdom (Medicine) check or an ability check using a Herbalism Kit, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Medical Intuition">
+			<description>When you make a Wisdom (Medicine) check or an ability check using a Herbalism Kit, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Deductive Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_DEDUCTIVE_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Deductive Intuition">
+			<description>When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Hunter's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_HUNTERS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Wisdom (Perception or Survival) check, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Hunter's Intuition">
+			<description>When you make a Wisdom (Perception or Survival) check, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Wild Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_WILD_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Wild Intuition">
+			<description>When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Ever Hospitable" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_EVER_HOSPITABLE">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Charisma (Persuasion) check or an ability check using Brewer's Supplies or Cook's Utensils, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Ever Hospitable">
+			<description>When you make a Charisma (Persuasion) check or an ability check using Brewer's Supplies or Cook's Utensils, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Artisan's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_ARTISANS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Arcana) check or an ability check using Artisan's Tools, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Artisan's Intuition">
+			<description>When you make an Intelligence (Arcana) check or an ability check using Artisan's Tools, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Gifted Scribe" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_GIFTED_SCRIBE">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (History) check or an ability check using Calligrapher's Supplies, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Gifted Scribe">
+			<description>When you make an Intelligence (History) check or an ability check using Calligrapher's Supplies, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Sentinel's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_SENTINELS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Wisdom (Insight or Perception) check, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Sentinel's Intuition">
+			<description>When you make a Wisdom (Insight or Perception) check, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Cunning Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_CUNNING_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Dexterity (Stealth) or Charisma (Performance) check, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Cunning Intuition">
+			<description>When you make a Dexterity (Stealth) or Charisma (Performance) check, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Windwright's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_WINDWRIGHTS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Dexterity (Acrobatics) check or an ability check using Navigator's Tools, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Windwright's Intuition">
+			<description>When you make a Dexterity (Acrobatics) check or an ability check using Navigator's Tools, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Potent Warder's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_WARDERS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Investigation) check or an ability check using Thieves' Tools, you can roll 1d6 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Potent Warder's Intuition">
+			<description>When you make an Intelligence (Investigation) check or an ability check using Thieves' Tools, you can roll 1d6 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
 	<element name="Dragonmark Preparation (Mark of Passage)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_PASSAGE">
 		<compendium display="false" />
 		<sheet display="false" />
