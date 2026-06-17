@@ -4,7 +4,7 @@
 		<name>AstroSnout Random Stuff</name>
 		<description>Custom Aurora Character Builder content collected by AstroSnout.</description>
 		<author url="https://github.com/AstroSnout">AstroSnout</author>
-		<update version="0.1.0">
+		<update version="0.2.0">
 			<file name="astrosnout-random-stuff.index" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff.index" />
 		</update>
 	</info>
