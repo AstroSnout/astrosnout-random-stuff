@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Feats</name>
-    <update version="0.4.0">
+    <update version="0.5.0">
       <file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
     </update>
   </info>
@@ -1542,6 +1542,7 @@
 			<stat name="intelligence" value="1" alt="Ability Score Increase (Potent Dragonmark)" requirements="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_INTELLIGENCE" />
 			<stat name="wisdom" value="1" alt="Ability Score Increase (Potent Dragonmark)" requirements="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_WISDOM" />
 			<stat name="charisma" value="1" alt="Ability Score Increase (Potent Dragonmark)" requirements="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_CHARISMA" />
+			<stat name="constitution" value="1" alt="Ability Score Increase (Potent Dragonmark)" requirements="ID_ASRS_FEAT_ABERRANT_DRAGONMARK" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_PREPARATION" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_SPELLCASTING" />
 			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_POTENT_INTUITIVE_MOTION" requirements="ID_ASRS_FEAT_MARK_OF_PASSAGE" />
@@ -3660,6 +3661,99 @@
 		</description>
 		<sheet alt="Improved Warding" action="Reaction" usage="{{proficiency}}/Long Rest">
 			<description>When a creature makes an attack roll against you or a creature you can see within 30 feet, you can impose Disadvantage on that roll.</description>
+		</sheet>
+	</element>
+
+	<element name="Aberrant Dragonmark" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_ABERRANT_DRAGONMARK">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_ABERRANT_DRAGONMARK),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Aberrant Fortitude.</i></b> When you fail a Constitution saving throw, you can take a Reaction to roll 1d4 and add the number rolled to the save, potentially turning the failure into a success. Once you've used this benefit, you can't use it again until you finish a Long Rest.</p>
+			<p class="indent"><b><i>Aberrant Magic.</i></b> You know one cantrip of your choice from the Sorcerer spell list. Also, choose a level 1 spell from that spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Short or Long Rest. You can also cast this spell using any spell slots you have. Constitution is your spellcasting ability for this spell.</p>
+			<p class="indent"><b><i>Aberrant Surge.</i></b> When you cast the level 1 spell from this feat, you can expend one of your Hit Point Dice and roll it. If you roll an even number, you gain a number of Temporary Hit Points equal to the number rolled. If you roll an odd number, one creature within 30 feet of you (not including you) takes Force damage equal to the number rolled. If no other creatures are in range, you take the damage.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ABERRANT_DRAGONMARK_ABERRANT_FORTITUDE" />
+			<select type="Spell" name="Cantrip (Aberrant Dragonmark)" supports="0,Sorcerer" />
+			<select type="Spell" name="1st-level Spell (Aberrant Dragonmark)" supports="1,Sorcerer" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ABERRANT_DRAGONMARK_ABERRANT_MAGIC" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ABERRANT_DRAGONMARK_ABERRANT_SURGE" />
+		</rules>
+	</element>
+
+	<element name="Aberrant Fortitude" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_ABERRANT_DRAGONMARK_ABERRANT_FORTITUDE">
+		<requirements>!ID_ASRS_FEAT_GREATER_ABERRANT_MARK</requirements>
+		<compendium display="false" />
+		<description>
+			<p>When you fail a Constitution saving throw, you can take a Reaction to roll 1d4 and add the number rolled to the save, potentially turning the failure into a success. Once you've used this benefit, you can't use it again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Aberrant Fortitude" action="Reaction" usage="1/Long Rest">
+			<description>When you fail a Constitution saving throw, you can roll 1d4 and add the number rolled to the save, potentially turning the failure into a success.</description>
+		</sheet>
+	</element>
+
+	<element name="Aberrant Magic" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_ABERRANT_DRAGONMARK_ABERRANT_MAGIC">
+		<compendium display="false" />
+		<description>
+			<p>You know one cantrip of your choice from the Sorcerer spell list. Also, choose a level 1 spell from that spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Short or Long Rest. You can also cast this spell using any spell slots you have. Constitution is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet alt="Aberrant Magic" usage="1/Short or Long Rest">
+			<description>You know one Sorcerer cantrip and always have one level 1 Sorcerer spell prepared. You can cast the level 1 spell once without a spell slot, regaining the ability to do so when you finish a Short or Long Rest. Constitution is your spellcasting ability for this spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Aberrant Surge" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_ABERRANT_DRAGONMARK_ABERRANT_SURGE">
+		<compendium display="false" />
+		<description>
+			<p>When you cast the level 1 spell from this feat, you can expend one of your Hit Point Dice and roll it. If you roll an even number, you gain a number of Temporary Hit Points equal to the number rolled. If you roll an odd number, one creature within 30 feet of you (not including you) takes Force damage equal to the number rolled. If no other creatures are in range, you take the damage.</p>
+		</description>
+		<sheet alt="Aberrant Surge">
+			<description>When you cast the level 1 spell from this feat, you can expend and roll one Hit Point Die. On an even roll, you gain Temporary Hit Points equal to the number rolled. On an odd roll, one creature within 30 feet of you takes Force damage equal to the number rolled. If no other creatures are in range, you take the damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Greater Aberrant Mark" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_GREATER_ABERRANT_MARK">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Aberrant Dragonmark Feat</prerequisite>
+		<requirements>[character:4],ID_ASRS_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Aberrant Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Constitution score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Improved Fortitude.</i></b> When you use the Aberrant Fortitude benefit of your Aberrant Dragonmark feat, you can roll 1d6 instead of 1d4. You also now regain your use of Aberrant Fortitude whenever you finish a Short or Long Rest.</p>
+			<p class="indent"><b><i>Mark of Inspiration.</i></b> When you cast a cantrip, you can roll one or two of your unexpended Hit Point Dice. You gain a number of Temporary Hit Points equal to the number rolled plus your Constitution modifier, and one creature of your choice within 30 feet of you (not including you) takes Force damage equal to the number rolled. Those dice are then expended.</p>
+			<p class="indent">You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="constitution" value="1" alt="Ability Score Increase (Greater Aberrant Mark)" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_GREATER_ABERRANT_MARK_IMPROVED_FORTITUDE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_GREATER_ABERRANT_MARK_MARK_OF_INSPIRATION" />
+		</rules>
+	</element>
+
+	<element name="Improved Fortitude" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_GREATER_ABERRANT_MARK_IMPROVED_FORTITUDE">
+		<compendium display="false" />
+		<description>
+			<p>When you use the Aberrant Fortitude benefit of your Aberrant Dragonmark feat, you can roll 1d6 instead of 1d4. You also now regain your use of Aberrant Fortitude whenever you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Improved Fortitude" action="Reaction" usage="1/Short or Long Rest">
+			<description>When you fail a Constitution saving throw, you can roll 1d6 and add the number rolled to the save, potentially turning the failure into a success.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Inspiration" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_GREATER_ABERRANT_MARK_MARK_OF_INSPIRATION">
+		<compendium display="false" />
+		<description>
+			<p>When you cast a cantrip, you can roll one or two of your unexpended Hit Point Dice. You gain a number of Temporary Hit Points equal to the number rolled plus your Constitution modifier, and one creature of your choice within 30 feet of you (not including you) takes Force damage equal to the number rolled. Those dice are then expended.</p>
+			<p>You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Mark of Inspiration" usage="{{proficiency}}/Long Rest">
+			<description>When you cast a cantrip, you can roll one or two unexpended Hit Point Dice. You gain Temporary Hit Points equal to the number rolled plus your Constitution modifier, and one creature of your choice within 30 feet takes Force damage equal to the number rolled. Those dice are expended.</description>
 		</sheet>
 	</element>
 	<element name="Dragonmark Feat" type="Grants" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
