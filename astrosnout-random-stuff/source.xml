@@ -6,7 +6,7 @@
       <file name="source.xml" url="https://raw.githubusercontent.com/AstroSnout/aurora-random-stuff/main/astrosnout-random-stuff/source.xml" />
     </update>
   </info>
-	<element name="Eberron - Forge of the Artificer" type="Source" source="Core" id="ID_ASRS_SOURCE_EBERRON_FORGE_OF_THE_ARTIFICER">
+	<element name="ASRS Eberron - Forge of the Artificer" type="Source" source="Core" id="ID_ASRS_SOURCE_EBERRON_FORGE_OF_THE_ARTIFICER">
 		<description>
 			<p>Additional Eberron character options.</p>
 		</description>

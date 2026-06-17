@@ -7,7 +7,7 @@
     </update>
   </info>
 
-	<element name="Mark of Passage" type="Feat" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_PASSAGE">
+	<element name="Mark of Passage" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_PASSAGE">
 		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
 		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_PASSAGE),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
 		<description>
@@ -63,7 +63,7 @@
 		</rules>
 	</element>
 
-	<element name="Courier's Speed" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_COURIERS_SPEED">
+	<element name="Courier's Speed" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_COURIERS_SPEED">
 		<compendium display="false" />
 		<description>
 			<p>Your Speed increases by 5 feet.</p>
@@ -76,7 +76,7 @@
 		</rules>
 	</element>
 
-	<element name="Intuitive Motion" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_INTUITIVE_MOTION">
+	<element name="Intuitive Motion" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_INTUITIVE_MOTION">
 		<compendium display="false" />
 		<description>
 			<p>When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -86,7 +86,7 @@
 		</sheet>
 	</element>
 
-	<element name="Intelligence" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_INTELLIGENCE">
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_INTELLIGENCE">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Misty Step</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence is your spellcasting ability for this spell.</p>
@@ -96,7 +96,7 @@
 		</sheet>
 	</element>
 
-	<element name="Wisdom" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_WISDOM">
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_WISDOM">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Misty Step</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Wisdom is your spellcasting ability for this spell.</p>
@@ -106,7 +106,7 @@
 		</sheet>
 	</element>
 
-	<element name="Charisma" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_CHARISMA">
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_CHARISMA">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Misty Step</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Charisma is your spellcasting ability for this spell.</p>
@@ -116,7 +116,7 @@
 		</sheet>
 	</element>
 
-	<element name="Spells of the Mark" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_SPELLS_OF_THE_MARK">
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_SPELLS_OF_THE_MARK">
 		<compendium display="false" />
 		<description>
 			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Passage Spells table are added to that feature's spell list.</p>
@@ -137,7 +137,7 @@
 		</sheet>
 	</element>
 
-	<element name="Mark of Healing" type="Feat" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_HEALING">
+	<element name="Mark of Healing" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_HEALING">
 		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
 		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_HEALING),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
 		<description>
@@ -193,7 +193,7 @@
 		</rules>
 	</element>
 
-	<element name="Medical Intuition" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_MEDICAL_INTUITION">
+	<element name="Medical Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_MEDICAL_INTUITION">
 		<compendium display="false" />
 		<description>
 			<p>When you make a Wisdom (Medicine) check or an ability check using a Herbalism Kit, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -203,7 +203,7 @@
 		</sheet>
 	</element>
 
-	<element name="Intelligence" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_INTELLIGENCE">
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_INTELLIGENCE">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Cure Wounds</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
@@ -215,7 +215,7 @@
 		</sheet>
 	</element>
 
-	<element name="Wisdom" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_WISDOM">
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_WISDOM">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Cure Wounds</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
@@ -227,7 +227,7 @@
 		</sheet>
 	</element>
 
-	<element name="Charisma" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_CHARISMA">
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_CHARISMA">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Cure Wounds</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
@@ -239,7 +239,7 @@
 		</sheet>
 	</element>
 
-	<element name="Spells of the Mark" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_SPELLS_OF_THE_MARK">
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_SPELLS_OF_THE_MARK">
 		<compendium display="false" />
 		<description>
 			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Healing Spells table are added to that feature's spell list.</p>
@@ -260,7 +260,7 @@
 		</sheet>
 	</element>
 
-	<element name="Mark of Detection" type="Feat" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_DETECTION">
+	<element name="Mark of Detection" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_DETECTION">
 		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
 		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_DETECTION),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
 		<description>
@@ -319,7 +319,7 @@
 		</rules>
 	</element>
 
-	<element name="Deductive Intuition" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_DEDUCTIVE_INTUITION">
+	<element name="Deductive Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_DEDUCTIVE_INTUITION">
 		<compendium display="false" />
 		<description>
 			<p>When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d4 and add the number rolled to the ability check.</p>
@@ -329,7 +329,7 @@
 		</sheet>
 	</element>
 
-	<element name="Intelligence" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_INTELLIGENCE">
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_INTELLIGENCE">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Detect Magic</i> and <i>Detect Poison and Disease</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
@@ -341,7 +341,7 @@
 		</sheet>
 	</element>
 
-	<element name="Wisdom" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_WISDOM">
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_WISDOM">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Detect Magic</i> and <i>Detect Poison and Disease</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
@@ -353,7 +353,7 @@
 		</sheet>
 	</element>
 
-	<element name="Charisma" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_CHARISMA">
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_CHARISMA">
 		<compendium display="false" />
 		<description>
 			<p>You always have the <i>Detect Magic</i> and <i>Detect Poison and Disease</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
@@ -365,7 +365,7 @@
 		</sheet>
 	</element>
 
-	<element name="Spells of the Mark" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_SPELLS_OF_THE_MARK">
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_SPELLS_OF_THE_MARK">
 		<compendium display="false" />
 		<description>
 			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Detection Spells table are added to that feature's spell list.</p>
@@ -386,5 +386,5 @@
 		</sheet>
 	</element>
 
-	<element name="Dragonmark Feat" type="Grants" source="Eberron - Forge of the Artificer" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+	<element name="Dragonmark Feat" type="Grants" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
 </elements>
