@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Feats</name>
-    <update version="0.5.0">
+    <update version="0.6.0">
       <file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
     </update>
   </info>
@@ -3754,6 +3754,934 @@
 		</description>
 		<sheet alt="Mark of Inspiration" usage="{{proficiency}}/Long Rest">
 			<description>When you cast a cantrip, you can roll one or two unexpended Hit Point Dice. You gain Temporary Hit Points equal to the number rolled plus your Constitution modifier, and one creature of your choice within 30 feet takes Force damage equal to the number rolled. Those dice are expended.</description>
+		</sheet>
+	</element>
+	<element name="Cold Caster" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_COLD_CASTER">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Cantrip.</i></b> You learn the <i>Ray of Frost</i> cantrip. If you already know it, you learn a different Wizard cantrip of your choice. The spell's spellcasting ability is the ability increased by this feat.</p>
+			<p class="indent"><b><i>Frostbite.</i></b> Once per turn when you hit a creature with an attack roll and deal Cold damage, you can temporarily negate the creature's defenses. The creature subtracts 1d4 from the next saving throw it makes before the end of your next turn.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_RAY_OF_FROST" />
+				<div element="ID_WOTC_PHB24_SPELL_RAY_OF_FROST" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Cold Caster)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_RAY_OF_FROST" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_COLD_CASTER_CANTRIP" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_COLD_CASTER_FROSTBITE" />
+		</rules>
+	</element>
+
+	<element name="Cantrip" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_COLD_CASTER_CANTRIP">
+		<compendium display="false" />
+		<description>
+			<p>You learn the <i>Ray of Frost</i> cantrip. If you already know it, you learn a different Wizard cantrip of your choice. The spell's spellcasting ability is the ability increased by this feat.</p>
+		</description>
+		<sheet alt="Cantrip">
+			<description>You learn the Ray of Frost cantrip. If you already know it, learn a different Wizard cantrip of your choice. The spellcasting ability is the ability increased by this feat.</description>
+		</sheet>
+	</element>
+
+	<element name="Frostbite" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_COLD_CASTER_FROSTBITE">
+		<compendium display="false" />
+		<description>
+			<p>Once per turn when you hit a creature with an attack roll and deal Cold damage, you can temporarily negate the creature's defenses. The creature subtracts 1d4 from the next saving throw it makes before the end of your next turn.</p>
+		</description>
+		<sheet alt="Frostbite">
+			<description>Once per turn when you hit a creature with an attack roll and deal Cold damage, the creature subtracts 1d4 from the next saving throw it makes before the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Dragonscarred" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_DRAGONSCARRED">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Cult of the Dragon Initiate Feat</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Cult of the Dragon Initiate Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Constitution or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Damage Resistance.</i></b> When you gain this feat, choose Acid, Cold, Fire, Lightning, or Poison. You have Resistance to the chosen damage type.</p>
+			<p class="indent"><b><i>Fearsome Power.</i></b> When you deal damage to a creature as part of the Attack or Magic action on your turn, you can use the Dragon's Terror benefit of the Cult of the Dragon Initiate feat as a Bonus Action this turn.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Dragonscarred)" supports="ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Feat Feature" name="Damage Resistance (Dragonscarred)" supports="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_ACID|ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_COLD|ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_FIRE|ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_LIGHTNING|ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_POISON" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_FEARSOME_POWER" />
+		</rules>
+	</element>
+
+	<element name="Fearsome Power" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_FEARSOME_POWER">
+		<compendium display="false" />
+		<description>
+			<p>When you deal damage to a creature as part of the Attack or Magic action on your turn, you can use the Dragon's Terror benefit of the Cult of the Dragon Initiate feat as a Bonus Action this turn.</p>
+		</description>
+		<sheet alt="Fearsome Power" action="Bonus Action">
+			<description>When you deal damage to a creature as part of the Attack or Magic action on your turn, you can use Dragon's Terror as a Bonus Action this turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Acid" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_ACID">
+		<compendium display="false" />
+		<description>
+			<p>You have Resistance to Acid damage.</p>
+		</description>
+		<sheet alt="Damage Resistance">
+			<description>You have Resistance to Acid damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Cold" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_COLD">
+		<compendium display="false" />
+		<description>
+			<p>You have Resistance to Cold damage.</p>
+		</description>
+		<sheet alt="Damage Resistance">
+			<description>You have Resistance to Cold damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Fire" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_FIRE">
+		<compendium display="false" />
+		<description>
+			<p>You have Resistance to Fire damage.</p>
+		</description>
+		<sheet alt="Damage Resistance">
+			<description>You have Resistance to Fire damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Lightning" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_LIGHTNING">
+		<compendium display="false" />
+		<description>
+			<p>You have Resistance to Lightning damage.</p>
+		</description>
+		<sheet alt="Damage Resistance">
+			<description>You have Resistance to Lightning damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Poison" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_DRAGONSCARRED_DAMAGE_RESISTANCE_POISON">
+		<compendium display="false" />
+		<description>
+			<p>You have Resistance to Poison damage.</p>
+		</description>
+		<sheet alt="Damage Resistance">
+			<description>You have Resistance to Poison damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Enclave Magic" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_ENCLAVE_MAGIC">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Emerald Enclave Fledgling Feat</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Emerald Enclave Fledgling Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Friend to Animals.</i></b> You have Advantage on ability checks when taking the Influence action with Beasts.</p>
+			<p class="indent"><b><i>Two Hearts, One Mind.</i></b> You always have the <i>Beast Sense</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. When you cast it without a spell slot using this feature, it doesn't require Concentration. You can also cast the spell using any spell slots you have of the appropriate level. The spell's spellcasting ability is the ability increased by this feat.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_BEAST_SENSE" />
+				<div element="ID_WOTC_PHB24_SPELL_BEAST_SENSE" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Enclave Magic)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BEAST_SENSE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ENCLAVE_MAGIC_FRIEND_TO_ANIMALS" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ENCLAVE_MAGIC_TWO_HEARTS_ONE_MIND" />
+		</rules>
+	</element>
+
+	<element name="Friend to Animals" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_ENCLAVE_MAGIC_FRIEND_TO_ANIMALS">
+		<compendium display="false" />
+		<description>
+			<p>You have Advantage on ability checks when taking the Influence action with Beasts.</p>
+		</description>
+		<sheet alt="Friend to Animals">
+			<description>You have Advantage on ability checks when taking the Influence action with Beasts.</description>
+		</sheet>
+	</element>
+
+	<element name="Two Hearts, One Mind" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_ENCLAVE_MAGIC_TWO_HEARTS_ONE_MIND">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Beast Sense</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. When you cast it without a spell slot using this feature, it doesn't require Concentration. You can also cast the spell using any spell slots you have of the appropriate level. The spell's spellcasting ability is the ability increased by this feat.</p>
+		</description>
+		<sheet alt="Two Hearts, One Mind" usage="1/Long Rest">
+			<description>You always have Beast Sense prepared. You can cast it once without a spell slot, regaining the ability when you finish a Long Rest. When cast this way, it does not require Concentration. The spellcasting ability is the ability increased by this feat.</description>
+		</sheet>
+	</element>
+
+	<element name="Fairy Trickster" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FAIRY_TRICKSTER">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Dexterity or Charisma ability score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Faerie Trod Trotter.</i></b> When you take the Disengage action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.</p>
+			<p class="indent"><b><i>Flustering Strike.</i></b> When you hit a creature with an attack roll, you can attempt to fluster the target. The target must succeed on a Wisdom saving throw (DC 8 plus the ability modifier of the score increased by this feat and your Proficiency Bonus) or have Disadvantage on saving throws until the end of your next turn.</p>
+			<p class="indent">You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Fairy Trickster)" supports="ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_FAIRY_TRICKSTER_FAERIE_TROD_TROTTER" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_FAIRY_TRICKSTER_FLUSTERING_STRIKE" />
+		</rules>
+	</element>
+
+	<element name="Faerie Trod Trotter" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_FAIRY_TRICKSTER_FAERIE_TROD_TROTTER">
+		<compendium display="false" />
+		<description>
+			<p>When you take the Disengage action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.</p>
+		</description>
+		<sheet alt="Faerie Trod Trotter">
+			<description>When you take the Disengage action on your turn, Difficult Terrain does not cost you extra movement for the rest of that turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Flustering Strike" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_FAIRY_TRICKSTER_FLUSTERING_STRIKE">
+		<compendium display="false" />
+		<description>
+			<p>When you hit a creature with an attack roll, you can attempt to fluster the target. The target must succeed on a Wisdom saving throw (DC 8 plus the ability modifier of the score increased by this feat and your Proficiency Bonus) or have Disadvantage on saving throws until the end of your next turn. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Flustering Strike" usage="{{proficiency}}/Long Rest">
+			<description>When you hit a creature with an attack roll, it must succeed on a Wisdom save (DC 8 + the ability modifier increased by this feat + PB) or have Disadvantage on saving throws until the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Genie Magic" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_GENIE_MAGIC">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Wish Magic.</i></b> As a Magic action, you can cast a level 1 spell of your choice from the Sorcerer spell list that has a casting time of an action. Once you use this benefit, you can't do so again until you finish a Long Rest. The spell's spellcasting ability is the ability increased by this feat.</p>
+			<p class="indent">When you reach level 11, the spell you cast with this feat is cast as though using a level 2 spell slot. When you reach level 17, the spell is cast as though using a level 3 spell slot.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Genie Magic)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Spell" name="Wish Magic Spell (Genie Magic)" supports="1,Sorcerer" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_GENIE_MAGIC_WISH_MAGIC" />
+		</rules>
+	</element>
+
+	<element name="Wish Magic" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_GENIE_MAGIC_WISH_MAGIC">
+		<compendium display="false" />
+		<description>
+			<p>As a Magic action, you can cast a level 1 spell of your choice from the Sorcerer spell list that has a casting time of an action. Once you use this benefit, you can't do so again until you finish a Long Rest. The spell's spellcasting ability is the ability increased by this feat.</p><p>When you reach level 11, the spell you cast with this feat is cast as though using a level 2 spell slot. When you reach level 17, the spell is cast as though using a level 3 spell slot.</p>
+		</description>
+		<sheet alt="Wish Magic" action="Magic" usage="1/Long Rest">
+			<description>As a Magic action, you can cast the chosen level 1 Sorcerer spell, using the ability increased by this feat as the spellcasting ability. It is cast as a level 2 spell at character level 11 and as a level 3 spell at character level 17.</description>
+		</sheet>
+	</element>
+
+	<element name="Harper Teamwork" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_HARPER_TEAMWORK">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Harper Agent Feat</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Harper Agent Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Dexterity or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Withering Wordplay.</i></b> When you take the Help action to assist an ally's attack roll against an enemy, that enemy also has Disadvantage on the first saving throw it makes before the start of your next turn.</p>
+			<p class="indent"><b><i>Inspiring Willpower.</i></b> If you succeed on a saving throw to end the Frightened or Paralyzed condition on yourself, you can choose one ally you can see within 30 feet of yourself that has the same condition. That condition immediately ends for that ally.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Harper Teamwork)" supports="ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_HARPER_TEAMWORK_WITHERING_WORDPLAY" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_HARPER_TEAMWORK_INSPIRING_WILLPOWER" />
+		</rules>
+	</element>
+
+	<element name="Withering Wordplay" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_HARPER_TEAMWORK_WITHERING_WORDPLAY">
+		<compendium display="false" />
+		<description>
+			<p>When you take the Help action to assist an ally's attack roll against an enemy, that enemy also has Disadvantage on the first saving throw it makes before the start of your next turn.</p>
+		</description>
+		<sheet alt="Withering Wordplay">
+			<description>When you take the Help action to assist an ally's attack roll against an enemy, that enemy also has Disadvantage on the first saving throw it makes before the start of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Inspiring Willpower" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_HARPER_TEAMWORK_INSPIRING_WILLPOWER">
+		<compendium display="false" />
+		<description>
+			<p>If you succeed on a saving throw to end the Frightened or Paralyzed condition on yourself, you can choose one ally you can see within 30 feet of yourself that has the same condition. That condition immediately ends for that ally.</p>
+		</description>
+		<sheet alt="Inspiring Willpower">
+			<description>If you succeed on a save to end the Frightened or Paralyzed condition on yourself, one ally you can see within 30 feet with the same condition immediately ends that condition.</description>
+		</sheet>
+	</element>
+
+	<element name="Lordly Resolve" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_LORDLY_RESOLVE">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Lords' Alliance Agent Feat</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Lords' Alliance Agent Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Strength or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Standard Bearer.</i></b> As a Bonus Action, choose up to three creatures within 60 feet of yourself that can see you. Each target can immediately take a Reaction to right itself and end the Prone condition, provided its Speed isn't 0.</p>
+			<p class="indent">Additionally, you bolster the targets' resolve, which lasts for 1 minute or until you have the Incapacitated condition. While bolstered, a target can't be possessed or gain the Charmed or Frightened condition; if a target is already possessed, Charmed, or Frightened, the target has Advantage on any new saving throw against the relevant effect.</p>
+			<p class="indent">Once you use this benefit, you can't do so again until you finish a Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Lordly Resolve)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_LORDLY_RESOLVE_STANDARD_BEARER" />
+		</rules>
+	</element>
+
+	<element name="Standard Bearer" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_LORDLY_RESOLVE_STANDARD_BEARER">
+		<compendium display="false" />
+		<description>
+			<p>As a Bonus Action, choose up to three creatures within 60 feet of yourself that can see you. Each target can immediately take a Reaction to right itself and end the Prone condition, provided its Speed isn't 0.</p><p>Additionally, you bolster the targets' resolve, which lasts for 1 minute or until you have the Incapacitated condition. While bolstered, a target can't be possessed or gain the Charmed or Frightened condition; if a target is already possessed, Charmed, or Frightened, the target has Advantage on any new saving throw against the relevant effect.</p>
+		</description>
+		<sheet alt="Standard Bearer" action="Bonus Action" usage="1/Long Rest">
+			<description>As a Bonus Action, choose up to three creatures within 60 feet that can see you. Each can take a Reaction to end Prone if its Speed is not 0, and is bolstered for 1 minute against possession, Charmed, and Frightened.</description>
+		</sheet>
+	</element>
+
+	<element name="Mythal Touched" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_MYTHAL_TOUCHED">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Mythal Ward.</i></b> If a spell attack hits you or you fail a saving throw against a spell, you can take a Reaction to roll on the Mythal-Touched Magic table to create a magical effect. If an effect requires a saving throw, the DC equals 8 plus the modifier of the ability increased by this feat and your Proficiency Bonus.</p>
+			<p class="indent">You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<h5>Mythal-Touched Magic</h5>
+			<table>
+				<thead><tr><td>1d20</td><td>Effect</td></tr></thead>
+				<tr><td>1-2</td><td>You and each creature within 15 feet of you make a Dexterity saving throw, taking Force damage equal to 1d8 times the level of the triggering spell on a failed save or half as much damage on a successful one.</td></tr>
+				<tr><td>3-7</td><td>You and the triggering spell's caster form a telepathic link for 1 hour.</td></tr>
+				<tr><td>8-10</td><td>Gravity is reversed in a 15-foot-radius, 60-foot-tall Cylinder centered on you for 1 minute, per the <i>Reverse Gravity</i> spell.</td></tr>
+				<tr><td>11-13</td><td>You and the triggering spell's caster each make a Constitution saving throw. On a failed save, the creature has the Stunned condition until the end of its next turn.</td></tr>
+				<tr><td>14-17</td><td>You gain a +2 bonus to AC for 1 minute, potentially turning the triggering spell into a miss if it was a spell attack.</td></tr>
+				<tr><td>18-19</td><td>Any flammable, nonmagical object within 10 feet of the triggering spell's caster that isn't being worn or carried by another creature bursts into flame, takes 1d4 Fire damage, and is burning.</td></tr>
+				<tr><td>20</td><td>The triggering spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_REVERSE_GRAVITY" />
+				<div element="ID_WOTC_PHB24_SPELL_REVERSE_GRAVITY" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Mythal Touched)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MYTHAL_TOUCHED_MYTHAL_WARD" />
+		</rules>
+	</element>
+
+	<element name="Mythal Ward" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_MYTHAL_TOUCHED_MYTHAL_WARD">
+		<compendium display="false" />
+		<description>
+			<p>If a spell attack hits you or you fail a saving throw against a spell, you can take a Reaction to roll on the Mythal-Touched Magic table to create a magical effect. If an effect requires a saving throw, the DC equals 8 plus the modifier of the ability increased by this feat and your Proficiency Bonus.</p>
+			<h5>Mythal-Touched Magic</h5>
+			<table>
+				<thead><tr><td>1d20</td><td>Effect</td></tr></thead>
+				<tr><td>1-2</td><td>You and each creature within 15 feet of you make a Dexterity saving throw, taking Force damage equal to 1d8 times the level of the triggering spell on a failed save or half as much damage on a successful one.</td></tr>
+				<tr><td>3-7</td><td>You and the triggering spell's caster form a telepathic link for 1 hour.</td></tr>
+				<tr><td>8-10</td><td>Gravity is reversed in a 15-foot-radius, 60-foot-tall Cylinder centered on you for 1 minute, per the <i>Reverse Gravity</i> spell.</td></tr>
+				<tr><td>11-13</td><td>You and the triggering spell's caster each make a Constitution saving throw. On a failed save, the creature has the Stunned condition until the end of its next turn.</td></tr>
+				<tr><td>14-17</td><td>You gain a +2 bonus to AC for 1 minute, potentially turning the triggering spell into a miss if it was a spell attack.</td></tr>
+				<tr><td>18-19</td><td>Any flammable, nonmagical object within 10 feet of the triggering spell's caster that isn't being worn or carried by another creature bursts into flame, takes 1d4 Fire damage, and is burning.</td></tr>
+				<tr><td>20</td><td>The triggering spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.</td></tr>
+			</table>
+		</description>
+		<sheet alt="Mythal Ward" action="Reaction" usage="{{proficiency}}/Long Rest">
+			<description>When a spell attack hits you or you fail a saving throw against a spell, take a Reaction to roll on the Mythal-Touched Magic table. The DC equals 8 + the ability modifier increased by this feat + PB.</description>
+		</sheet>
+	</element>
+
+	<element name="Order's Resilience" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_ORDERS_RESILIENCE">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Tyro of the Gauntlet Feat</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Tyro of the Gauntlet Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Strength, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Resurge.</i></b> When you have the Prone condition, you can right yourself with only 5 feet of movement.</p>
+			<p class="indent"><b><i>Stronger Together.</i></b> If you are within 5 feet of an ally that doesn't have the Incapacitated condition, you and that ally have Advantage on Strength saving throws. You can't use this benefit while you have the Incapacitated condition.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Order's Resilience)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ORDERS_RESILIENCE_RESURGE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ORDERS_RESILIENCE_STRONGER_TOGETHER" />
+		</rules>
+	</element>
+
+	<element name="Resurge" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_ORDERS_RESILIENCE_RESURGE">
+		<compendium display="false" />
+		<description>
+			<p>When you have the Prone condition, you can right yourself with only 5 feet of movement.</p>
+		</description>
+		<sheet alt="Resurge">
+			<description>When you have the Prone condition, you can right yourself with only 5 feet of movement.</description>
+		</sheet>
+	</element>
+
+	<element name="Stronger Together" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_ORDERS_RESILIENCE_STRONGER_TOGETHER">
+		<compendium display="false" />
+		<description>
+			<p>If you are within 5 feet of an ally that doesn't have the Incapacitated condition, you and that ally have Advantage on Strength saving throws. You can't use this benefit while you have the Incapacitated condition.</p>
+		</description>
+		<sheet alt="Stronger Together">
+			<description>While within 5 feet of an ally that is not Incapacitated, you and that ally have Advantage on Strength saving throws. You cannot use this benefit while Incapacitated.</description>
+		</sheet>
+	</element>
+
+	<element name="Purple Dragon Commandant" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_PURPLE_DRAGON_COMMANDANT">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Purple Dragon Rook Feat or Martial Weapon Proficiency</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Purple Dragon Rook Feat or Martial Weapon Proficiency)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Strength or Dexterity score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Encourage Ally.</i></b> As a Bonus Action, you bolster one ally you can see within 30 feet. The ally gains Temporary Hit Points equal to 2d6 plus the modifier of the ability score increased by this feat. You can take this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all uses when you finish a Long Rest.</p>
+			<p class="indent"><b><i>Last Stand.</i></b> You have Advantage on attack rolls while Bloodied.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Purple Dragon Commandant)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_PURPLE_DRAGON_COMMANDANT_ENCOURAGE_ALLY" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_PURPLE_DRAGON_COMMANDANT_LAST_STAND" />
+		</rules>
+	</element>
+
+	<element name="Encourage Ally" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_PURPLE_DRAGON_COMMANDANT_ENCOURAGE_ALLY">
+		<compendium display="false" />
+		<description>
+			<p>As a Bonus Action, you bolster one ally you can see within 30 feet. The ally gains Temporary Hit Points equal to 2d6 plus the modifier of the ability score increased by this feat. You can take this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Encourage Ally" action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>As a Bonus Action, one ally you can see within 30 feet gains Temporary Hit Points equal to 2d6 plus the modifier of the ability score increased by this feat.</description>
+		</sheet>
+	</element>
+
+	<element name="Last Stand" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_PURPLE_DRAGON_COMMANDANT_LAST_STAND">
+		<compendium display="false" />
+		<description>
+			<p>You have Advantage on attack rolls while Bloodied.</p>
+		</description>
+		<sheet alt="Last Stand">
+			<description>You have Advantage on attack rolls while Bloodied.</description>
+		</sheet>
+	</element>
+
+	<element name="Spellfire Adept" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_SPELLFIRE_ADEPT">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Spellfire Spark Feat or the Spellcasting or Pact Magic Feature</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Spellfire Spark Feat or the Spellcasting or Pact Magic Feature)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Fueled Spellfire.</i></b> Once per turn, when a spell you cast deals Radiant damage, you can expend up to two Hit Point Dice, roll them, and add the total rolled to one damage roll of the spell.</p>
+			<p class="indent"><b><i>Searing Spellfire.</i></b> When you make a damage roll that deals Radiant damage, it ignores Resistance to Radiant damage.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Spellfire Adept)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_SPELLFIRE_ADEPT_FUELED_SPELLFIRE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_SPELLFIRE_ADEPT_SEARING_SPELLFIRE" />
+		</rules>
+	</element>
+
+	<element name="Fueled Spellfire" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_SPELLFIRE_ADEPT_FUELED_SPELLFIRE">
+		<compendium display="false" />
+		<description>
+			<p>Once per turn, when a spell you cast deals Radiant damage, you can expend up to two Hit Point Dice, roll them, and add the total rolled to one damage roll of the spell.</p>
+		</description>
+		<sheet alt="Fueled Spellfire">
+			<description>Once per turn, when a spell you cast deals Radiant damage, you can expend up to two Hit Point Dice and add the total rolled to one damage roll of the spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Searing Spellfire" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_SPELLFIRE_ADEPT_SEARING_SPELLFIRE">
+		<compendium display="false" />
+		<description>
+			<p>When you make a damage roll that deals Radiant damage, it ignores Resistance to Radiant damage.</p>
+		</description>
+		<sheet alt="Searing Spellfire">
+			<description>When you make a damage roll that deals Radiant damage, it ignores Resistance to Radiant damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Street Justice" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_STREET_JUSTICE">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Strength or Dexterity score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Headlock.</i></b> Your allies have Advantage on attack rolls against a creature Grappled by you.</p>
+			<p class="indent"><b><i>Sturdy Knot.</i></b> When you use Chain, Manacles, or Rope to bind a creature, add your Proficiency Bonus to the DC to escape or burst the Chain, Manacles, or Rope.</p>
+			<p class="indent"><b><i>Tough Talk.</i></b> A creature's Hostile attitude doesn't impose Disadvantage on your Charisma (Intimidation) checks to influence that creature.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Street Justice)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_STREET_JUSTICE_HEADLOCK" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_STREET_JUSTICE_STURDY_KNOT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_STREET_JUSTICE_TOUGH_TALK" />
+		</rules>
+	</element>
+
+	<element name="Headlock" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_STREET_JUSTICE_HEADLOCK">
+		<compendium display="false" />
+		<description>
+			<p>Your allies have Advantage on attack rolls against a creature Grappled by you.</p>
+		</description>
+		<sheet alt="Headlock">
+			<description>Your allies have Advantage on attack rolls against a creature Grappled by you.</description>
+		</sheet>
+	</element>
+
+	<element name="Sturdy Knot" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_STREET_JUSTICE_STURDY_KNOT">
+		<compendium display="false" />
+		<description>
+			<p>When you use Chain, Manacles, or Rope to bind a creature, add your Proficiency Bonus to the DC to escape or burst the Chain, Manacles, or Rope.</p>
+		</description>
+		<sheet alt="Sturdy Knot">
+			<description>When you use Chain, Manacles, or Rope to bind a creature, add your Proficiency Bonus to the DC to escape or burst it.</description>
+		</sheet>
+	</element>
+
+	<element name="Tough Talk" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_STREET_JUSTICE_TOUGH_TALK">
+		<compendium display="false" />
+		<description>
+			<p>A creature's Hostile attitude doesn't impose Disadvantage on your Charisma (Intimidation) checks to influence that creature.</p>
+		</description>
+		<sheet alt="Tough Talk">
+			<description>A creature's Hostile attitude does not impose Disadvantage on your Charisma (Intimidation) checks to influence it.</description>
+		</sheet>
+	</element>
+
+	<element name="Zhentarim Tactics" type="Feat" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_ZHENTARIM_TACTICS">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Zhentarim Ruffian Feat</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Zhentarim Ruffian Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Dexterity or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Retaliate.</i></b> Immediately after a creature within 5 feet of you hits you with a melee attack, you can make an Opportunity Attack against that creature.</p>
+			<p class="indent"><b><i>Versatile Merc.</i></b> When you finish a Long Rest, choose a skill in which you have proficiency. You have Expertise in that skill until you finish your next Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Zhentarim Tactics)" supports="ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ZHENTARIM_TACTICS_RETALIATE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_ZHENTARIM_TACTICS_VERSATILE_MERC" />
+		</rules>
+	</element>
+
+	<element name="Retaliate" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_ZHENTARIM_TACTICS_RETALIATE">
+		<compendium display="false" />
+		<description>
+			<p>Immediately after a creature within 5 feet of you hits you with a melee attack, you can make an Opportunity Attack against that creature.</p>
+		</description>
+		<sheet alt="Retaliate">
+			<description>Immediately after a creature within 5 feet hits you with a melee attack, you can make an Opportunity Attack against that creature.</description>
+		</sheet>
+	</element>
+
+	<element name="Versatile Merc" type="Feat Feature" source="ASRS Forgotten Realms - Heroes of Faerun" id="ID_ASRS_FEAT_FEATURE_ZHENTARIM_TACTICS_VERSATILE_MERC">
+		<compendium display="false" />
+		<description>
+			<p>When you finish a Long Rest, choose a skill in which you have proficiency. You have Expertise in that skill until you finish your next Long Rest.</p>
+		</description>
+		<sheet alt="Versatile Merc">
+			<description>When you finish a Long Rest, choose a proficient skill. You have Expertise in that skill until you finish your next Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Bloodlust" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_BLOODLUST">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Strength, Dexterity, or Constitution score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Powerful Recovery.</i></b> When you roll a Hit Point Die to regain Hit Points, you can treat any roll of 1 or 2 as a 3.</p>
+			<p class="indent"><b><i>Sanguine Feast.</i></b> Once per turn when you hit a Bloodied creature that isn't a Construct or Undead with an attack roll, you can expend a Hit Point Die, roll it, and regain a number of Hit Points equal to the number rolled plus your Constitution modifier.</p>
+			<p class="indent">You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Bloodlust)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CONSTITUTION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_BLOODLUST_POWERFUL_RECOVERY" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_BLOODLUST_SANGUINE_FEAST" />
+		</rules>
+	</element>
+
+	<element name="Powerful Recovery" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_BLOODLUST_POWERFUL_RECOVERY">
+		<compendium display="false" />
+		<description>
+			<p>When you roll a Hit Point Die to regain Hit Points, you can treat any roll of 1 or 2 as a 3.</p>
+		</description>
+		<sheet alt="Powerful Recovery">
+			<description>When you roll a Hit Point Die to regain Hit Points, you can treat any roll of 1 or 2 as a 3.</description>
+		</sheet>
+	</element>
+
+	<element name="Sanguine Feast" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_BLOODLUST_SANGUINE_FEAST">
+		<compendium display="false" />
+		<description>
+			<p>Once per turn when you hit a Bloodied creature that isn't a Construct or Undead with an attack roll, you can expend a Hit Point Die, roll it, and regain a number of Hit Points equal to the number rolled plus your Constitution modifier. You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Sanguine Feast" usage="{{proficiency}}/Long Rest">
+			<description>Once per turn when you hit a Bloodied creature that is not a Construct or Undead with an attack roll, expend a Hit Point Die and regain HP equal to the roll plus your Constitution modifier.</description>
+		</sheet>
+	</element>
+
+	<element name="Bomber" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_BOMBER">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Dexterity score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Far Lobber.</i></b> When you use the Attack action to throw a vial or flask, you can target an object or creature you can see within 40 feet of yourself.</p>
+			<p class="indent"><b><i>Long Shots.</i></b> Attacking at long range doesn't impose Disadvantage on your attack rolls with Thrown weapons.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="dexterity" value="1" alt="Ability Score Increase (Bomber)" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_BOMBER_FAR_LOBBER" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_BOMBER_LONG_SHOTS" />
+		</rules>
+	</element>
+
+	<element name="Far Lobber" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_BOMBER_FAR_LOBBER">
+		<compendium display="false" />
+		<description>
+			<p>When you use the Attack action to throw a vial or flask, you can target an object or creature you can see within 40 feet of yourself.</p>
+		</description>
+		<sheet alt="Far Lobber">
+			<description>When you use the Attack action to throw a vial or flask, you can target an object or creature you can see within 40 feet.</description>
+		</sheet>
+	</element>
+
+	<element name="Long Shots" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_BOMBER_LONG_SHOTS">
+		<compendium display="false" />
+		<description>
+			<p>Attacking at long range doesn't impose Disadvantage on your attack rolls with Thrown weapons.</p>
+		</description>
+		<sheet alt="Long Shots">
+			<description>Attacking at long range does not impose Disadvantage on your attack rolls with Thrown weapons.</description>
+		</sheet>
+	</element>
+
+	<element name="Cloying Mists" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_CLOYING_MISTS">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Arise, Fog.</i></b> You always have the <i>Fog Cloud</i> spell prepared. You can cast it without a spell slot, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.</p>
+			<p class="indent"><b><i>Grasping Mist.</i></b> Whenever you cast <i>Fog Cloud</i>, nonmagical flames in the spell's Sphere are extinguished, and creatures other than you and your allies have their Speed reduced by 5 feet while in the spell's Sphere.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_FOG_CLOUD" />
+				<div element="ID_WOTC_PHB24_SPELL_FOG_CLOUD" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Cloying Mists)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FOG_CLOUD" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_CLOYING_MISTS_ARISE_FOG" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_CLOYING_MISTS_GRASPING_MIST" />
+		</rules>
+	</element>
+
+	<element name="Arise, Fog" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_CLOYING_MISTS_ARISE_FOG">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Fog Cloud</i> spell prepared. You can cast it without a spell slot, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.</p>
+		</description>
+		<sheet alt="Arise, Fog" usage="1/Long Rest">
+			<description>You always have Fog Cloud prepared. You can cast it once without a spell slot, regaining the ability when you finish a Long Rest. The spellcasting ability is the ability increased by this feat.</description>
+		</sheet>
+	</element>
+
+	<element name="Grasping Mist" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_CLOYING_MISTS_GRASPING_MIST">
+		<compendium display="false" />
+		<description>
+			<p>Whenever you cast <i>Fog Cloud</i>, nonmagical flames in the spell's Sphere are extinguished, and creatures other than you and your allies have their Speed reduced by 5 feet while in the spell's Sphere.</p>
+		</description>
+		<sheet alt="Grasping Mist">
+			<description>Whenever you cast Fog Cloud, nonmagical flames in the Sphere are extinguished, and creatures other than you and your allies have their Speed reduced by 5 feet while in the Sphere.</description>
+		</sheet>
+	</element>
+
+	<element name="Delicious Pain" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_DELICIOUS_PAIN">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Toughened Flesh.</i></b> Immediately after you take Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to gain Resistance to Bludgeoning, Piercing, and Slashing damage until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Delicious Pain)" supports="Feat Ability Score Increase" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_DELICIOUS_PAIN_TOUGHENED_FLESH" />
+		</rules>
+	</element>
+
+	<element name="Toughened Flesh" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_DELICIOUS_PAIN_TOUGHENED_FLESH">
+		<compendium display="false" />
+		<description>
+			<p>Immediately after you take Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to gain Resistance to Bludgeoning, Piercing, and Slashing damage until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Toughened Flesh" action="Reaction" usage="1/Short or Long Rest">
+			<description>Immediately after you take Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to gain Resistance to Bludgeoning, Piercing, and Slashing damage until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Love Bites" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_LOVE_BITES">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Endearing Pain.</i></b> Immediately after you damage a creature with a Melee weapon or an Unarmed Strike, you can take a Bonus Action to give the target the Charmed condition until the start of your next turn or until you or your allies damage it. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Love Bites)" supports="Feat Ability Score Increase" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_LOVE_BITES_ENDEARING_PAIN" />
+		</rules>
+	</element>
+
+	<element name="Endearing Pain" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_LOVE_BITES_ENDEARING_PAIN">
+		<compendium display="false" />
+		<description>
+			<p>Immediately after you damage a creature with a Melee weapon or an Unarmed Strike, you can take a Bonus Action to give the target the Charmed condition until the start of your next turn or until you or your allies damage it. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Endearing Pain" action="Bonus Action" usage="1/Short or Long Rest">
+			<description>Immediately after you damage a creature with a Melee weapon or an Unarmed Strike, you can take a Bonus Action to give the target the Charmed condition until the start of your next turn or until you or your allies damage it. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Putrefy" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_PUTREFY">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Necrosis.</i></b> When you make a damage roll that deals Necrotic damage, you can cause one creature taking that damage to have the Poisoned condition until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Putrefy)" supports="Feat Ability Score Increase" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_PUTREFY_NECROSIS" />
+		</rules>
+	</element>
+
+	<element name="Necrosis" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_PUTREFY_NECROSIS">
+		<compendium display="false" />
+		<description>
+			<p>When you make a damage roll that deals Necrotic damage, you can cause one creature taking that damage to have the Poisoned condition until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Necrosis" usage="1/Short or Long Rest">
+			<description>When you make a damage roll that deals Necrotic damage, you can cause one creature taking that damage to have the Poisoned condition until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Rebuke" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_REBUKE">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Radiant Strike.</i></b> When you make a damage roll that deals Radiant damage, you can cause one Huge or smaller creature taking the damage to have the Prone condition. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Rebuke)" supports="Feat Ability Score Increase" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_REBUKE_RADIANT_STRIKE" />
+		</rules>
+	</element>
+
+	<element name="Radiant Strike" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_REBUKE_RADIANT_STRIKE">
+		<compendium display="false" />
+		<description>
+			<p>When you make a damage roll that deals Radiant damage, you can cause one Huge or smaller creature taking the damage to have the Prone condition. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Radiant Strike" usage="1/Short or Long Rest">
+			<description>When you make a damage roll that deals Radiant damage, you can cause one Huge or smaller creature taking the damage to have the Prone condition. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Light Bringer" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_LIGHT_BRINGER">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Sacred Magic.</i></b> You learn the <i>Light</i> spell and can cast it without Material components. If you already know that cantrip, you learn a different Cleric cantrip of your choice. The spell's spellcasting ability is the ability increased by this feat.</p>
+			<p class="indent"><b><i>Solar Luminance.</i></b> When you cast <i>Light</i>, you can have the light from the spell be sunlight. Once you use this benefit, you can't use it again until you finish a Long Rest.</p>
+			<p class="indent"><b><i>Sun's Healing.</i></b> As a Bonus Action while within sunlight, you can expend one of your Hit Point Dice, roll the die, and regain a number of Hit Points equal to the roll. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_LIGHT" />
+				<div element="ID_WOTC_PHB24_SPELL_LIGHT" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Light Bringer)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LIGHT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_LIGHT_BRINGER_SACRED_MAGIC" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_LIGHT_BRINGER_SOLAR_LUMINANCE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_LIGHT_BRINGER_SUNS_HEALING" />
+		</rules>
+	</element>
+
+	<element name="Sacred Magic" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_LIGHT_BRINGER_SACRED_MAGIC">
+		<compendium display="false" />
+		<description>
+			<p>You learn the <i>Light</i> spell and can cast it without Material components. If you already know that cantrip, you learn a different Cleric cantrip of your choice. The spell's spellcasting ability is the ability increased by this feat.</p>
+		</description>
+		<sheet alt="Sacred Magic">
+			<description>You learn the Light cantrip and can cast it without Material components. If you already know it, learn a different Cleric cantrip. The spellcasting ability is the ability increased by this feat.</description>
+		</sheet>
+	</element>
+
+	<element name="Solar Luminance" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_LIGHT_BRINGER_SOLAR_LUMINANCE">
+		<compendium display="false" />
+		<description>
+			<p>When you cast <i>Light</i>, you can have the light from the spell be sunlight. Once you use this benefit, you can't use it again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Solar Luminance" usage="1/Long Rest">
+			<description>When you cast Light, you can have the light from the spell be sunlight.</description>
+		</sheet>
+	</element>
+
+	<element name="Sun's Healing" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_LIGHT_BRINGER_SUNS_HEALING">
+		<compendium display="false" />
+		<description>
+			<p>As a Bonus Action while within sunlight, you can expend one of your Hit Point Dice, roll the die, and regain a number of Hit Points equal to the roll. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Sun's Healing" action="Bonus Action" usage="1/Short or Long Rest">
+			<description>As a Bonus Action while within sunlight, expend and roll one Hit Point Die, and regain Hit Points equal to the roll.</description>
+		</sheet>
+	</element>
+
+	<element name="Treacherous Allure" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_TREACHEROUS_ALLURE">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Enchanting Presence.</i></b> You always have the <i>Charm Person</i> spell prepared. You can cast it without a spell slot, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.</p>
+			<p class="indent"><b><i>Inevitable Betrayal.</i></b> You have Advantage on attack rolls against creatures with the Charmed condition.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_CHARM_PERSON" />
+				<div element="ID_WOTC_PHB24_SPELL_CHARM_PERSON" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Treacherous Allure)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CHARM_PERSON" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_TREACHEROUS_ALLURE_ENCHANTING_PRESENCE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_TREACHEROUS_ALLURE_INEVITABLE_BETRAYAL" />
+		</rules>
+	</element>
+
+	<element name="Enchanting Presence" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_TREACHEROUS_ALLURE_ENCHANTING_PRESENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Charm Person</i> spell prepared. You can cast it without a spell slot, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.</p>
+		</description>
+		<sheet alt="Enchanting Presence" usage="1/Long Rest">
+			<description>You always have Charm Person prepared. You can cast it once without a spell slot, regaining the ability when you finish a Long Rest. The spellcasting ability is the ability increased by this feat.</description>
+		</sheet>
+	</element>
+
+	<element name="Inevitable Betrayal" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_TREACHEROUS_ALLURE_INEVITABLE_BETRAYAL">
+		<compendium display="false" />
+		<description>
+			<p>You have Advantage on attack rolls against creatures with the Charmed condition.</p>
+		</description>
+		<sheet alt="Inevitable Betrayal">
+			<description>You have Advantage on attack rolls against creatures with the Charmed condition.</description>
+		</sheet>
+	</element>
+
+	<element name="Vampire Touched" type="Feat" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_VAMPIRE_TOUCHED">
+		<supports>General</supports>
+		<prerequisite>Level 4+</prerequisite>
+		<requirements>[character:4]</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Vampire Magic.</i></b> Choose one level 1 spell from the Enchantment or Illusion school of magic. You always have that spell and the <i>Spider Climb</i> spell prepared. You can cast each of these spells without expending a spell slot, but when you cast <i>Spider Climb</i> this way, you must target yourself, and you must finish a Long Rest before you can cast each spell in this way again. You can also cast either spell using spell slots you have of the appropriate level. Your spellcasting ability for the spells is the ability increased by this feat.</p>
+			<div class="reference">
+				<div element="ID_PHB_SPELL_SPIDER_CLIMB" />
+				<div element="ID_WOTC_PHB24_SPELL_SPIDER_CLIMB" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Vampire Touched)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+			<select type="Spell" name="Vampire Magic Spell (Vampire Touched)" supports="ID_PHB_SPELL_ANIMAL_FRIENDSHIP|ID_PHB_SPELL_BANE|ID_PHB_SPELL_BLESS|ID_PHB_SPELL_CHARM_PERSON|ID_PHB_SPELL_COLOR_SPRAY|ID_PHB_SPELL_COMMAND|ID_PHB_SPELL_COMPELLED_DUEL|ID_PHB_SPELL_DISGUISE_SELF|ID_PHB_SPELL_DISSONANT_WHISPERS|ID_PHB_SPELL_HEROISM|ID_PHB_SPELL_HEX|ID_PHB_SPELL_ILLUSORY_SCRIPT|ID_PHB_SPELL_SILENT_IMAGE|ID_PHB_SPELL_SLEEP|ID_PHB_SPELL_TASHAS_HIDEOUS_LAUGHTER|ID_WOTC_PHB24_SPELL_ANIMAL_FRIENDSHIP|ID_WOTC_PHB24_SPELL_BANE|ID_WOTC_PHB24_SPELL_BLESS|ID_WOTC_PHB24_SPELL_CHARM_PERSON|ID_WOTC_PHB24_SPELL_COLOR_SPRAY|ID_WOTC_PHB24_SPELL_COMMAND|ID_WOTC_PHB24_SPELL_COMPELLED_DUEL|ID_WOTC_PHB24_SPELL_DISGUISE_SELF|ID_WOTC_PHB24_SPELL_DISSONANT_WHISPERS|ID_WOTC_PHB24_SPELL_HEROISM|ID_WOTC_PHB24_SPELL_HEX|ID_WOTC_PHB24_SPELL_ILLUSORY_SCRIPT|ID_WOTC_PHB24_SPELL_SILENT_IMAGE|ID_WOTC_PHB24_SPELL_SLEEP|ID_WOTC_PHB24_SPELL_TASHAS_HIDEOUS_LAUGHTER" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIDER_CLIMB" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_VAMPIRE_TOUCHED_VAMPIRE_MAGIC" />
+		</rules>
+	</element>
+
+	<element name="Vampire Magic" type="Feat Feature" source="ASRS Astarion's Book of Hungers" id="ID_ASRS_FEAT_FEATURE_VAMPIRE_TOUCHED_VAMPIRE_MAGIC">
+		<compendium display="false" />
+		<description>
+			<p>Choose one level 1 spell from the Enchantment or Illusion school of magic. You always have that spell and the <i>Spider Climb</i> spell prepared. You can cast each of these spells without expending a spell slot, but when you cast <i>Spider Climb</i> this way, you must target yourself, and you must finish a Long Rest before you can cast each spell in this way again. You can also cast either spell using spell slots you have of the appropriate level. Your spellcasting ability for the spells is the ability increased by this feat.</p>
+		</description>
+		<sheet alt="Vampire Magic" usage="1/Long Rest each">
+			<description>You always have the chosen level 1 Enchantment or Illusion spell and Spider Climb prepared. You can cast each once without a spell slot, regaining each when you finish a Long Rest. Spider Climb must target yourself when cast this way.</description>
 		</sheet>
 	</element>
 	<element name="Dragonmark Feat" type="Grants" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
