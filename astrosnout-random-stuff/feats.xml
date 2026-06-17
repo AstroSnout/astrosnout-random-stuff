@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Feats</name>
-    <update version="0.2.0">
+    <update version="0.3.0">
       <file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
     </update>
   </info>
@@ -1511,6 +1511,254 @@
 		<sheet display="false">
 			<description>The spells on the Mark of Warding Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
 		</sheet>
+	</element>
+
+	<element name="Potent Dragonmark" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_POTENT_DRAGONMARK">
+		<supports>General</supports>
+		<prerequisite>Level 4+, Any Dragonmark Feat</prerequisite>
+		<requirements>[character:4],ID_ASRS_GRANTS_DRAGONMARK_FEAT</requirements>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Any Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ability Score Increase.</i></b> Increase the spellcasting ability score used by your Dragonmark feat by 1, to a maximum of 20.</p>
+			<p class="indent"><b><i>Dragonmark Preparation.</i></b> You always have the spells on your Spells of the Mark list (if any) prepared.</p>
+			<p class="indent"><b><i>Dragonmark Spellcasting.</i></b> You have one extra spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a Short or Long Rest. You can use this spell slot to cast only a spell you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Potent Dragonmark)" supports="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_INTELLIGENCE" requirements="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_INTELLIGENCE||ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_INTELLIGENCE" />
+			<select type="Ability Score Improvement" name="Ability Score Increase (Potent Dragonmark)" supports="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_WISDOM" requirements="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_WISDOM||ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_WISDOM" />
+			<select type="Ability Score Improvement" name="Ability Score Increase (Potent Dragonmark)" supports="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CHARISMA" requirements="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_CHARISMA||ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_CHARISMA" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_PREPARATION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_SPELLCASTING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_PASSAGE" requirements="ID_ASRS_FEAT_MARK_OF_PASSAGE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_HEALING" requirements="ID_ASRS_FEAT_MARK_OF_HEALING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_DETECTION" requirements="ID_ASRS_FEAT_MARK_OF_DETECTION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_FINDING" requirements="ID_ASRS_FEAT_MARK_OF_FINDING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_HANDLING" requirements="ID_ASRS_FEAT_MARK_OF_HANDLING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_HOSPITALITY" requirements="ID_ASRS_FEAT_MARK_OF_HOSPITALITY" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_MAKING" requirements="ID_ASRS_FEAT_MARK_OF_MAKING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_SCRIBING" requirements="ID_ASRS_FEAT_MARK_OF_SCRIBING" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_SENTINEL" requirements="ID_ASRS_FEAT_MARK_OF_SENTINEL" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_SHADOW" requirements="ID_ASRS_FEAT_MARK_OF_SHADOW" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_STORM" requirements="ID_ASRS_FEAT_MARK_OF_STORM" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_WARDING" requirements="ID_ASRS_FEAT_MARK_OF_WARDING" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_PREPARATION">
+		<compendium display="false" />
+		<description>
+			<p>You always have the spells on your Spells of the Mark list (if any) prepared.</p>
+		</description>
+		<sheet alt="Dragonmark Preparation">
+			<description>You always have the spells on your Spells of the Mark list prepared.</description>
+		</sheet>
+	</element>
+
+	<element name="Dragonmark Spellcasting" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_DRAGONMARK_SPELLCASTING">
+		<compendium display="false" />
+		<description>
+			<p>You have one extra spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a Short or Long Rest. You can use this spell slot to cast only a spell you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.</p>
+		</description>
+		<sheet alt="Dragonmark Spellcasting" usage="1/Short or Long Rest">
+			<description>You have one extra level 2 spell slot to cast only a spell you have prepared because of your Dragonmark feat or Potent Dragonmark. You regain the expended slot when you finish a Short or Long Rest.</description>
+			<description level="5">You have one extra level 3 spell slot to cast only a spell you have prepared because of your Dragonmark feat or Potent Dragonmark. You regain the expended slot when you finish a Short or Long Rest.</description>
+			<description level="7">You have one extra level 4 spell slot to cast only a spell you have prepared because of your Dragonmark feat or Potent Dragonmark. You regain the expended slot when you finish a Short or Long Rest.</description>
+			<description level="9">You have one extra level 5 spell slot to cast only a spell you have prepared because of your Dragonmark feat or Potent Dragonmark. You regain the expended slot when you finish a Short or Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Passage)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_PASSAGE">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_EXPEDITIOUS_RETREAT" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_JUMP" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_STEED" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLINK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PHANTOM_STEED" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIMENSION_DOOR" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FREEDOM_OF_MOVEMENT" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TELEPORTATION_CIRCLE" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Healing)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_HEALING">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FALSE_LIFE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEALING_WORD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_VIGOR" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PRAYER_OF_HEALING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_VITALITY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MASS_HEALING_WORD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_LIFE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_PURITY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GREATER_RESTORATION" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Detection)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_DETECTION">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_EVIL_AND_GOOD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_IDENTIFY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_THOUGHTS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_TRAPS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLAIRVOYANCE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_NONDETECTION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_EYE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIVINATION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEGEND_LORE" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Finding)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_FINDING">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FAERIE_FIRE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LONGSTRIDER" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_ANIMALS_OR_PLANTS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MIND_SPIKE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLAIRVOYANCE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_PLANTS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIVINATION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_CREATURE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMUNE_WITH_NATURE" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Handling)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_HANDLING">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMAND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_FAMILIAR" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BEAST_SENSE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CALM_EMOTIONS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BEACON_OF_HOPE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_ANIMALS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_LIFE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DOMINATE_BEAST" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AWAKEN" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Hospitality)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_HOSPITALITY">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GOODBERRY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SLEEP" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AID" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ENHANCE_ABILITY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CREATE_FOOD_AND_WATER" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEOMUNDS_TINY_HUT" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_PURITY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MORDENKAINENS_PRIVATE_SANCTUM" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HALLOW" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Making)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_MAKING">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_IDENTIFY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TENSERS_FLOATING_DISK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONTINUAL_FLAME" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIRITUAL_WEAPON" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_BARRAGE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ELEMENTAL_WEAPON" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FABRICATE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_STONE_SHAPE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CREATION" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Scribing)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_SCRIBING">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMAND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ILLUSORY_SCRIPT" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_MESSENGER" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SILENCE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SENDING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TONGUES" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_EYE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONFUSION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DREAM" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Sentinel)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_SENTINEL">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMPELLED_DUEL" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD_OF_FAITH" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WARDING_BOND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ZONE_OF_TRUTH" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COUNTERSPELL" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PROTECTION_FROM_ENERGY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUARDIAN_OF_FAITH" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BIGBYS_HAND" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Shadow)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_SHADOW">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DISGUISE_SELF" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SILENT_IMAGE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DARKNESS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLAIRVOYANCE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAJOR_IMAGE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GREATER_INVISIBILITY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HALLUCINATORY_TERRAIN" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISLEAD" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Storm)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_STORM">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FEATHER_FALL" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FOG_CLOUD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEVITATE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHATTER" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SLEET_STORM" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WIND_WALL" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_MINOR_ELEMENTALS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONTROL_WATER" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_ELEMENTAL" />
+		</rules>
+	</element>
+
+	<element name="Dragonmark Preparation (Mark of Warding)" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_POTENT_DRAGONMARK_PREPARATION_MARK_OF_WARDING">
+		<compendium display="false" />
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARMOR_OF_AGATHYS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SANCTUARY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_KNOCK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_NYSTULS_MAGIC_AURA" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GLYPH_OF_WARDING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_CIRCLE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEOMUNDS_SECRET_CHEST" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MORDENKAINENS_FAITHFUL_HOUND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANTILIFE_SHELL" />
+		</rules>
 	</element>
 
 	<element name="Dragonmark Feat" type="Grants" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
