@@ -10,6 +10,7 @@
 	</info>
 	<files>
 		<file name="source.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/source.xml" />
+		<file name="bard-moon.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/bard-moon.xml" />
 		<file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
 	</files>
 </index>

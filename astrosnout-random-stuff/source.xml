@@ -17,4 +17,16 @@
 			<set name="homebrew">true</set>
 		</setters>
 	</element>
+
+	<element name="ASRS Forgotten Realms - Heroes of Faerun" type="Source" source="Core" id="ID_ASRS_SOURCE_FORGOTTEN_REALMS_HEROES_OF_FAERUN">
+		<description>
+			<p>Additional Forgotten Realms character options.</p>
+		</description>
+		<setters>
+			<set name="abbreviation">FRHOF</set>
+			<set name="author" abbreviation="WOTC">Wizards of the Coast</set>
+			<set name="url" />
+			<set name="homebrew">true</set>
+		</setters>
+	</element>
 </elements>
