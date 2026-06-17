@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Feats</name>
-    <update version="0.3.0">
+    <update version="0.3.1">
       <file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
     </update>
   </info>
