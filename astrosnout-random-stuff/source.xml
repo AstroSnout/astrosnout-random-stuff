@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Source</name>
-    <update version="0.3.0">
+    <update version="0.4.0">
       <file name="source.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/source.xml" />
     </update>
   </info>
@@ -36,6 +36,18 @@
 		</description>
 		<setters>
 			<set name="abbreviation">ABOH</set>
+			<set name="author" abbreviation="WOTC">Wizards of the Coast</set>
+			<set name="url" />
+			<set name="homebrew">true</set>
+		</setters>
+	</element>
+
+	<element name="ASRS Ravenloft - The Horrors Within" type="Source" source="Core" id="ID_ASRS_SOURCE_RAVENLOFT_THE_HORRORS_WITHIN">
+		<description>
+			<p>Additional Ravenloft character options.</p>
+		</description>
+		<setters>
+			<set name="abbreviation">RTHW</set>
 			<set name="author" abbreviation="WOTC">Wizards of the Coast</set>
 			<set name="url" />
 			<set name="homebrew">true</set>

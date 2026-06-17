@@ -4,13 +4,14 @@
 		<name>AstroSnout Random Stuff</name>
 		<description>Custom Aurora Character Builder content collected by AstroSnout.</description>
 		<author url="https://github.com/AstroSnout">AstroSnout</author>
-		<update version="0.2.0">
+		<update version="0.4.0">
 			<file name="astrosnout-random-stuff.index" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff.index" />
 		</update>
 	</info>
 	<files>
 		<file name="source.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/source.xml" />
 		<file name="bard-moon.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/bard-moon.xml" />
+		<file name="warlock-undead.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/warlock-undead.xml" />
 		<file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
 	</files>
 </index>
