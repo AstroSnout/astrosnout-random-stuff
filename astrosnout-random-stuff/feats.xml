@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <name>Feats</name>
+    <update version="0.1.0">
+      <file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/aurora-random-stuff/main/astrosnout-random-stuff/feats.xml" />
+    </update>
+  </info>
+
+	<element name="Mark of Passage" type="Feat" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_PASSAGE">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_PASSAGE),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Courier's Speed.</i></b> Your Speed increases by 5 feet.</p>
+			<p class="indent"><b><i>Intuitive Motion.</i></b> When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Magical Passage.</i></b> You always have the <i>Misty Step</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Passage Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Passage Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Expeditious Retreat, Jump</i></td></tr>
+				<tr><td>2</td><td><i>Find Steed, Pass without Trace</i></td></tr>
+				<tr><td>3</td><td><i>Blink, Phantom Steed</i></td></tr>
+				<tr><td>4</td><td><i>Dimension Door, Freedom of Movement</i></td></tr>
+				<tr><td>5</td><td><i>Teleportation Circle</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_MISTY_STEP" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_EXPEDITIOUS_RETREAT</extend>
+			<extend>ID_PHB_SPELL_JUMP</extend>
+			<extend>ID_PHB_SPELL_FIND_STEED</extend>
+			<extend>ID_PHB_SPELL_PASS_WITHOUT_TRACE</extend>
+			<extend>ID_PHB_SPELL_BLINK</extend>
+			<extend>ID_PHB_SPELL_PHANTOM_STEED</extend>
+			<extend>ID_PHB_SPELL_DIMENSION_DOOR</extend>
+			<extend>ID_PHB_SPELL_FREEDOM_OF_MOVEMENT</extend>
+			<extend>ID_PHB_SPELL_TELEPORTATION_CIRCLE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_EXPEDITIOUS_RETREAT</extend>
+			<extend>ID_WOTC_PHB24_SPELL_JUMP</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FIND_STEED</extend>
+			<extend>ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_BLINK</extend>
+			<extend>ID_WOTC_PHB24_SPELL_PHANTOM_STEED</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DIMENSION_DOOR</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FREEDOM_OF_MOVEMENT</extend>
+			<extend>ID_WOTC_PHB24_SPELL_TELEPORTATION_CIRCLE</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_COURIERS_SPEED" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_INTUITIVE_MOTION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISTY_STEP" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Passage)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Courier's Speed" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_COURIERS_SPEED">
+		<compendium display="false" />
+		<description>
+			<p>Your Speed increases by 5 feet.</p>
+		</description>
+		<sheet>
+			<description>Your Speed increases by 5 feet.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="5" bonus="dragonmark" alt="Courier's Speed" />
+		</rules>
+	</element>
+
+	<element name="Intuitive Motion" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_INTUITIVE_MOTION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Intuitive Motion">
+			<description>When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Misty Step</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet alt="Magical Passage" usage="1/Long Rest">
+			<description>You always have the Misty Step spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence is your spellcasting ability for this spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Misty Step</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Wisdom is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet alt="Magical Passage" usage="1/Long Rest">
+			<description>You always have the Misty Step spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Wisdom is your spellcasting ability for this spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_MAGICAL_PASSAGE_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Misty Step</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Charisma is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet alt="Magical Passage" usage="1/Long Rest">
+			<description>You always have the Misty Step spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Charisma is your spellcasting ability for this spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_PASSAGE_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Passage Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Passage Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Expeditious Retreat, Jump</i></td></tr>
+				<tr><td>2</td><td><i>Find Steed, Pass without Trace</i></td></tr>
+				<tr><td>3</td><td><i>Blink, Phantom Steed</i></td></tr>
+				<tr><td>4</td><td><i>Dimension Door, Freedom of Movement</i></td></tr>
+				<tr><td>5</td><td><i>Teleportation Circle</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Passage Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Healing" type="Feat" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_HEALING">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_HEALING),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Medical Intuition.</i></b> When you make a Wisdom (Medicine) check or an ability check using a Herbalism Kit, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Healing Touch.</i></b> You always have the <i>Cure Wounds</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Lesser Restoration</i> spell prepared and can cast it the same way.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Healing Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Healing Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>False Life, Healing Word</i></td></tr>
+				<tr><td>2</td><td><i>Arcane Vigor, Prayer of Healing</i></td></tr>
+				<tr><td>3</td><td><i>Aura of Vitality, Mass Healing Word</i></td></tr>
+				<tr><td>4</td><td><i>Aura of Life, Aura of Purity</i></td></tr>
+				<tr><td>5</td><td><i>Greater Restoration</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_CURE_WOUNDS" />
+				<div element="ID_WOTC_PHB24_SPELL_LESSER_RESTORATION" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_FALSE_LIFE</extend>
+			<extend>ID_PHB_SPELL_HEALING_WORD</extend>
+			<extend>ID_PHB_SPELL_PRAYER_OF_HEALING</extend>
+			<extend>ID_PHB_SPELL_AURA_OF_VITALITY</extend>
+			<extend>ID_PHB_SPELL_MASS_HEALING_WORD</extend>
+			<extend>ID_PHB_SPELL_AURA_OF_LIFE</extend>
+			<extend>ID_PHB_SPELL_AURA_OF_PURITY</extend>
+			<extend>ID_PHB_SPELL_GREATER_RESTORATION</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FALSE_LIFE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_HEALING_WORD</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ARCANE_VIGOR</extend>
+			<extend>ID_WOTC_PHB24_SPELL_PRAYER_OF_HEALING</extend>
+			<extend>ID_WOTC_PHB24_SPELL_AURA_OF_VITALITY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_MASS_HEALING_WORD</extend>
+			<extend>ID_WOTC_PHB24_SPELL_AURA_OF_LIFE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_AURA_OF_PURITY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_GREATER_RESTORATION</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_MEDICAL_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CURE_WOUNDS" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LESSER_RESTORATION" level="3" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Healing)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Medical Intuition" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_MEDICAL_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Wisdom (Medicine) check or an ability check using a Herbalism Kit, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Medical Intuition">
+			<description>When you make a Wisdom (Medicine) check or an ability check using a Herbalism Kit, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Cure Wounds</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Lesser Restoration</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Healing Touch" usage="1/Long Rest">
+			<description>You always have the Cure Wounds spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</description>
+			<description level="3">You always have the Cure Wounds and Lesser Restoration spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Cure Wounds</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Lesser Restoration</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Healing Touch" usage="1/Long Rest">
+			<description>You always have the Cure Wounds spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for this spell.</description>
+			<description level="3">You always have the Cure Wounds and Lesser Restoration spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_HEALING_TOUCH_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Cure Wounds</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Lesser Restoration</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Healing Touch" usage="1/Long Rest">
+			<description>You always have the Cure Wounds spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for this spell.</description>
+			<description level="3">You always have the Cure Wounds and Lesser Restoration spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HEALING_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Healing Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Healing Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>False Life, Healing Word</i></td></tr>
+				<tr><td>2</td><td><i>Arcane Vigor, Prayer of Healing</i></td></tr>
+				<tr><td>3</td><td><i>Aura of Vitality, Mass Healing Word</i></td></tr>
+				<tr><td>4</td><td><i>Aura of Life, Aura of Purity</i></td></tr>
+				<tr><td>5</td><td><i>Greater Restoration</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Healing Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Detection" type="Feat" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_DETECTION">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_DETECTION),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Deductive Intuition.</i></b> When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Magical Detection.</i></b> You always have the <i>Detect Magic</i> and <i>Detect Poison and Disease</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>See Invisibility</i> spell prepared and can cast it the same way.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Detection Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Detection Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Detect Evil and Good, Identify</i></td></tr>
+				<tr><td>2</td><td><i>Detect Thoughts, Find Traps</i></td></tr>
+				<tr><td>3</td><td><i>Clairvoyance, Nondetection</i></td></tr>
+				<tr><td>4</td><td><i>Arcane Eye, Divination</i></td></tr>
+				<tr><td>5</td><td><i>Legend Lore</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" />
+				<div element="ID_WOTC_PHB24_SPELL_DETECT_POISON_AND_DISEASE" />
+				<div element="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_DETECT_EVIL_AND_GOOD</extend>
+			<extend>ID_PHB_SPELL_IDENTIFY</extend>
+			<extend>ID_PHB_SPELL_DETECT_THOUGHTS</extend>
+			<extend>ID_PHB_SPELL_FIND_TRAPS</extend>
+			<extend>ID_PHB_SPELL_CLAIRVOYANCE</extend>
+			<extend>ID_PHB_SPELL_NONDETECTION</extend>
+			<extend>ID_PHB_SPELL_ARCANE_EYE</extend>
+			<extend>ID_PHB_SPELL_DIVINATION</extend>
+			<extend>ID_PHB_SPELL_LEGEND_LORE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DETECT_EVIL_AND_GOOD</extend>
+			<extend>ID_WOTC_PHB24_SPELL_IDENTIFY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DETECT_THOUGHTS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FIND_TRAPS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CLAIRVOYANCE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_NONDETECTION</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ARCANE_EYE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DIVINATION</extend>
+			<extend>ID_WOTC_PHB24_SPELL_LEGEND_LORE</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_DEDUCTIVE_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_POISON_AND_DISEASE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" level="3" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Detection)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Deductive Intuition" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_DEDUCTIVE_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Deductive Intuition">
+			<description>When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Detect Magic</i> and <i>Detect Poison and Disease</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>See Invisibility</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Magical Detection" usage="1/Long Rest each">
+			<description>You always have the Detect Magic and Detect Poison and Disease spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Detect Magic, Detect Poison and Disease, and See Invisibility spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Detect Magic</i> and <i>Detect Poison and Disease</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>See Invisibility</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Magical Detection" usage="1/Long Rest each">
+			<description>You always have the Detect Magic and Detect Poison and Disease spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Detect Magic, Detect Poison and Disease, and See Invisibility spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_MAGICAL_DETECTION_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Detect Magic</i> and <i>Detect Poison and Disease</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>See Invisibility</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Magical Detection" usage="1/Long Rest each">
+			<description>You always have the Detect Magic and Detect Poison and Disease spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Detect Magic, Detect Poison and Disease, and See Invisibility spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_DETECTION_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Detection Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Detection Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Detect Evil and Good, Identify</i></td></tr>
+				<tr><td>2</td><td><i>Detect Thoughts, Find Traps</i></td></tr>
+				<tr><td>3</td><td><i>Clairvoyance, Nondetection</i></td></tr>
+				<tr><td>4</td><td><i>Arcane Eye, Divination</i></td></tr>
+				<tr><td>5</td><td><i>Legend Lore</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Detection Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Dragonmark Feat" type="Grants" source="Eberron - Forge of the Artificer" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+</elements>

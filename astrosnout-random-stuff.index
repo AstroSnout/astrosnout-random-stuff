@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>AstroSnout Random Stuff</name>
+		<description>Custom Aurora Character Builder content collected by AstroSnout.</description>
+		<author url="https://github.com/AstroSnout">AstroSnout</author>
+		<update version="0.1.0">
+			<file name="astrosnout-random-stuff.index" url="https://raw.githubusercontent.com/AstroSnout/aurora-random-stuff/main/astrosnout-random-stuff.index" />
+		</update>
+	</info>
+	<files>
+		<file name="source.xml" url="https://raw.githubusercontent.com/AstroSnout/aurora-random-stuff/main/astrosnout-random-stuff/source.xml" />
+		<file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/aurora-random-stuff/main/astrosnout-random-stuff/feats.xml" />
+	</files>
+</index>
