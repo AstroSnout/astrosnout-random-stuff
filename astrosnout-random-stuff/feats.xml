@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Feats</name>
-    <update version="0.1.0">
+    <update version="0.2.0">
       <file name="feats.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/feats.xml" />
     </update>
   </info>
@@ -383,6 +383,1133 @@
 		</description>
 		<sheet display="false">
 			<description>The spells on the Mark of Detection Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Finding" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_FINDING">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_FINDING),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Hunter's Intuition.</i></b> When you make a Wisdom (Perception or Survival) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Finder's Magic.</i></b> You always have the <i>Hunter's Mark</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Locate Object</i> spell prepared and can cast it the same way.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Finding Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Finding Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Faerie Fire, Longstrider</i></td></tr>
+				<tr><td>2</td><td><i>Locate Animals or Plants, Mind Spike</i></td></tr>
+				<tr><td>3</td><td><i>Clairvoyance, Speak with Plants</i></td></tr>
+				<tr><td>4</td><td><i>Divination, Locate Creature</i></td></tr>
+				<tr><td>5</td><td><i>Commune with Nature</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_HUNTERS_MARK" />
+				<div element="ID_WOTC_PHB24_SPELL_LOCATE_OBJECT" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_FAERIE_FIRE</extend>
+			<extend>ID_PHB_SPELL_LONGSTRIDER</extend>
+			<extend>ID_PHB_SPELL_LOCATE_ANIMALS_OR_PLANTS</extend>
+			<extend>ID_XGTE_SPELL_MIND_SPIKE</extend>
+			<extend>ID_PHB_SPELL_CLAIRVOYANCE</extend>
+			<extend>ID_PHB_SPELL_SPEAK_WITH_PLANTS</extend>
+			<extend>ID_PHB_SPELL_DIVINATION</extend>
+			<extend>ID_PHB_SPELL_LOCATE_CREATURE</extend>
+			<extend>ID_PHB_SPELL_COMMUNE_WITH_NATURE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FAERIE_FIRE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_LONGSTRIDER</extend>
+			<extend>ID_WOTC_PHB24_SPELL_LOCATE_ANIMALS_OR_PLANTS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_MIND_SPIKE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CLAIRVOYANCE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SPEAK_WITH_PLANTS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DIVINATION</extend>
+			<extend>ID_WOTC_PHB24_SPELL_LOCATE_CREATURE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_COMMUNE_WITH_NATURE</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_HUNTERS_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HUNTERS_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_OBJECT" level="3" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Finding)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Hunter's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_HUNTERS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Wisdom (Perception or Survival) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Hunter's Intuition">
+			<description>When you make a Wisdom (Perception or Survival) check, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Hunter's Mark</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Locate Object</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Finder's Magic" usage="1/Long Rest">
+			<description>You always have the Hunter's Mark spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</description>
+			<description level="3">You always have the Hunter's Mark and Locate Object spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Hunter's Mark</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for this spell.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Locate Object</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Finder's Magic" usage="1/Long Rest">
+			<description>You always have the Hunter's Mark spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for this spell.</description>
+			<description level="3">You always have the Hunter's Mark and Locate Object spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_FINDERS_MAGIC_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Hunter's Mark</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for this spell.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Locate Object</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Finder's Magic" usage="1/Long Rest">
+			<description>You always have the Hunter's Mark spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for this spell.</description>
+			<description level="3">You always have the Hunter's Mark and Locate Object spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_FINDING_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Finding Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Finding Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Faerie Fire, Longstrider</i></td></tr>
+				<tr><td>2</td><td><i>Locate Animals or Plants, Mind Spike</i></td></tr>
+				<tr><td>3</td><td><i>Clairvoyance, Speak with Plants</i></td></tr>
+				<tr><td>4</td><td><i>Divination, Locate Creature</i></td></tr>
+				<tr><td>5</td><td><i>Commune with Nature</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Finding Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Handling" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_HANDLING">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_HANDLING),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Wild Intuition.</i></b> When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Primal Connection.</i></b> You always have the <i>Animal Friendship</i> and <i>Speak with Animals</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent"><b><i>Monstrous Connections.</i></b> When you reach character level 3, you can target a Monstrosity when you cast <i>Animal Friendship</i> or <i>Speak with Animals</i> if the creature's Intelligence score is 3 or lower.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Handling Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Handling Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Command, Find Familiar</i></td></tr>
+				<tr><td>2</td><td><i>Beast Sense, Calm Emotions</i></td></tr>
+				<tr><td>3</td><td><i>Beacon of Hope, Conjure Animals</i></td></tr>
+				<tr><td>4</td><td><i>Aura of Life, Dominate Beast</i></td></tr>
+				<tr><td>5</td><td><i>Awaken</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_ANIMAL_FRIENDSHIP" />
+				<div element="ID_WOTC_PHB24_SPELL_SPEAK_WITH_ANIMALS" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_COMMAND</extend>
+			<extend>ID_PHB_SPELL_FIND_FAMILIAR</extend>
+			<extend>ID_PHB_SPELL_BEAST_SENSE</extend>
+			<extend>ID_PHB_SPELL_CALM_EMOTIONS</extend>
+			<extend>ID_PHB_SPELL_BEACON_OF_HOPE</extend>
+			<extend>ID_PHB_SPELL_CONJURE_ANIMALS</extend>
+			<extend>ID_PHB_SPELL_AURA_OF_LIFE</extend>
+			<extend>ID_PHB_SPELL_DOMINATE_BEAST</extend>
+			<extend>ID_PHB_SPELL_AWAKEN</extend>
+			<extend>ID_WOTC_PHB24_SPELL_COMMAND</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FIND_FAMILIAR</extend>
+			<extend>ID_WOTC_PHB24_SPELL_BEAST_SENSE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CALM_EMOTIONS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_BEACON_OF_HOPE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CONJURE_ANIMALS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_AURA_OF_LIFE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DOMINATE_BEAST</extend>
+			<extend>ID_WOTC_PHB24_SPELL_AWAKEN</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_WILD_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_MONSTROUS_CONNECTIONS" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_FRIENDSHIP" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_ANIMALS" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Handling)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Wild Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_WILD_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Wild Intuition">
+			<description>When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Monstrous Connections" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_MONSTROUS_CONNECTIONS">
+		<compendium display="false" />
+		<description>
+			<p>When you reach character level 3, you can target a Monstrosity when you cast Animal Friendship or Speak with Animals if the creature's Intelligence score is 3 or lower.</p>
+		</description>
+		<sheet alt="Monstrous Connections">
+			<description>When you reach character level 3, you can target a Monstrosity when you cast Animal Friendship or Speak with Animals if the creature's Intelligence score is 3 or lower.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Animal Friendship</i> and <i>Speak with Animals</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Primal Connection" usage="1/Long Rest each">
+			<description>You always have the Animal Friendship and Speak with Animals spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Animal Friendship</i> and <i>Speak with Animals</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have. Wisdom is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Primal Connection" usage="1/Long Rest each">
+			<description>You always have the Animal Friendship and Speak with Animals spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_PRIMAL_CONNECTION_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Animal Friendship</i> and <i>Speak with Animals</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have. Charisma is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Primal Connection" usage="1/Long Rest each">
+			<description>You always have the Animal Friendship and Speak with Animals spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HANDLING_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Handling Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Handling Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Command, Find Familiar</i></td></tr>
+				<tr><td>2</td><td><i>Beast Sense, Calm Emotions</i></td></tr>
+				<tr><td>3</td><td><i>Beacon of Hope, Conjure Animals</i></td></tr>
+				<tr><td>4</td><td><i>Aura of Life, Dominate Beast</i></td></tr>
+				<tr><td>5</td><td><i>Awaken</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Handling Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Hospitality" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_HOSPITALITY">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_HOSPITALITY),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Ever Hospitable.</i></b> When you make a Charisma (Persuasion) check or an ability check using Brewer's Supplies or Cook's Utensils, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Innkeeper's Magic.</i></b> You always have the <i>Purify Food and Drink</i> and <i>Unseen Servant</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Calm Emotions</i> spell prepared and can cast it the same way.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Hospitality Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Hospitality Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Goodberry, Sleep</i></td></tr>
+				<tr><td>2</td><td><i>Aid, Enhance Ability</i></td></tr>
+				<tr><td>3</td><td><i>Create Food and Water, Leomund's Tiny Hut</i></td></tr>
+				<tr><td>4</td><td><i>Aura of Purity, Mordenkainen's Private Sanctum</i></td></tr>
+				<tr><td>5</td><td><i>Hallow</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_PURIFY_FOOD_AND_DRINK" />
+				<div element="ID_WOTC_PHB24_SPELL_UNSEEN_SERVANT" />
+				<div element="ID_WOTC_PHB24_SPELL_CALM_EMOTIONS" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_GOODBERRY</extend>
+			<extend>ID_PHB_SPELL_SLEEP</extend>
+			<extend>ID_PHB_SPELL_AID</extend>
+			<extend>ID_PHB_SPELL_ENHANCE_ABILITY</extend>
+			<extend>ID_PHB_SPELL_CREATE_FOOD_AND_WATER</extend>
+			<extend>ID_PHB_SPELL_LEOMUNDS_TINY_HUT</extend>
+			<extend>ID_PHB_SPELL_AURA_OF_PURITY</extend>
+			<extend>ID_PHB_SPELL_MORDENKAINENS_PRIVATE_SANCTUM</extend>
+			<extend>ID_PHB_SPELL_HALLOW</extend>
+			<extend>ID_WOTC_PHB24_SPELL_GOODBERRY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SLEEP</extend>
+			<extend>ID_WOTC_PHB24_SPELL_AID</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ENHANCE_ABILITY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CREATE_FOOD_AND_WATER</extend>
+			<extend>ID_WOTC_PHB24_SPELL_LEOMUNDS_TINY_HUT</extend>
+			<extend>ID_WOTC_PHB24_SPELL_AURA_OF_PURITY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_MORDENKAINENS_PRIVATE_SANCTUM</extend>
+			<extend>ID_WOTC_PHB24_SPELL_HALLOW</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_EVER_HOSPITABLE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PURIFY_FOOD_AND_DRINK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_UNSEEN_SERVANT" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CALM_EMOTIONS" level="3" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Hospitality)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Ever Hospitable" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_EVER_HOSPITABLE">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Charisma (Persuasion) check or an ability check using Brewer's Supplies or Cook's Utensils, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Ever Hospitable">
+			<description>When you make a Charisma (Persuasion) check or an ability check using Brewer's Supplies or Cook's Utensils, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Purify Food and Drink</i> and <i>Unseen Servant</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Calm Emotions</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Innkeeper's Magic" usage="1/Long Rest each">
+			<description>You always have the Purify Food and Drink and Unseen Servant spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Purify Food and Drink, Unseen Servant, and Calm Emotions spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Purify Food and Drink</i> and <i>Unseen Servant</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Calm Emotions</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Innkeeper's Magic" usage="1/Long Rest each">
+			<description>You always have the Purify Food and Drink and Unseen Servant spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Purify Food and Drink, Unseen Servant, and Calm Emotions spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_INNKEEPERS_MAGIC_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Purify Food and Drink</i> and <i>Unseen Servant</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Calm Emotions</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Innkeeper's Magic" usage="1/Long Rest each">
+			<description>You always have the Purify Food and Drink and Unseen Servant spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Purify Food and Drink, Unseen Servant, and Calm Emotions spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_HOSPITALITY_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Hospitality Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Hospitality Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Goodberry, Sleep</i></td></tr>
+				<tr><td>2</td><td><i>Aid, Enhance Ability</i></td></tr>
+				<tr><td>3</td><td><i>Create Food and Water, Leomund's Tiny Hut</i></td></tr>
+				<tr><td>4</td><td><i>Aura of Purity, Mordenkainen's Private Sanctum</i></td></tr>
+				<tr><td>5</td><td><i>Hallow</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Hospitality Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Making" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_MAKING">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_MAKING),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Artisan's Intuition.</i></b> When you make an Intelligence (Arcana) check or an ability check using Artisan's Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Spellsmith.</i></b> You know the <i>Mending</i> cantrip. You also always have the <i>Magic Weapon</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Making Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Making Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Identify, Tenser's Floating Disk</i></td></tr>
+				<tr><td>2</td><td><i>Continual Flame, Spiritual Weapon</i></td></tr>
+				<tr><td>3</td><td><i>Conjure Barrage, Elemental Weapon</i></td></tr>
+				<tr><td>4</td><td><i>Fabricate, Stone Shape</i></td></tr>
+				<tr><td>5</td><td><i>Creation</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_MENDING" />
+				<div element="ID_WOTC_PHB24_SPELL_MAGIC_WEAPON" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_IDENTIFY</extend>
+			<extend>ID_PHB_SPELL_TENSERS_FLOATING_DISK</extend>
+			<extend>ID_PHB_SPELL_CONTINUAL_FLAME</extend>
+			<extend>ID_PHB_SPELL_SPIRITUAL_WEAPON</extend>
+			<extend>ID_PHB_SPELL_CONJURE_BARRAGE</extend>
+			<extend>ID_PHB_SPELL_ELEMENTAL_WEAPON</extend>
+			<extend>ID_PHB_SPELL_FABRICATE</extend>
+			<extend>ID_PHB_SPELL_STONE_SHAPE</extend>
+			<extend>ID_PHB_SPELL_CREATION</extend>
+			<extend>ID_WOTC_PHB24_SPELL_IDENTIFY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_TENSERS_FLOATING_DISK</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CONTINUAL_FLAME</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SPIRITUAL_WEAPON</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CONJURE_BARRAGE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ELEMENTAL_WEAPON</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FABRICATE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_STONE_SHAPE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CREATION</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_ARTISANS_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MENDING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_WEAPON" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Making)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Artisan's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_ARTISANS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Arcana) check or an ability check using Artisan's Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Artisan's Intuition">
+			<description>When you make an Intelligence (Arcana) check or an ability check using Artisan's Tools, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Mending</i> cantrip. You also always have the <i>Magic Weapon</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Spellsmith" usage="1/Long Rest">
+			<description>You know the Mending cantrip. You always have the Magic Weapon spell prepared. You can cast Magic Weapon once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Mending</i> cantrip. You also always have the <i>Magic Weapon</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Wisdom is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Spellsmith" usage="1/Long Rest">
+			<description>You know the Mending cantrip. You always have the Magic Weapon spell prepared. You can cast Magic Weapon once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLSMITH_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Mending</i> cantrip. You also always have the <i>Magic Weapon</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Charisma is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Spellsmith" usage="1/Long Rest">
+			<description>You know the Mending cantrip. You always have the Magic Weapon spell prepared. You can cast Magic Weapon once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_MAKING_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Making Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Making Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Identify, Tenser's Floating Disk</i></td></tr>
+				<tr><td>2</td><td><i>Continual Flame, Spiritual Weapon</i></td></tr>
+				<tr><td>3</td><td><i>Conjure Barrage, Elemental Weapon</i></td></tr>
+				<tr><td>4</td><td><i>Fabricate, Stone Shape</i></td></tr>
+				<tr><td>5</td><td><i>Creation</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Making Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Scribing" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_SCRIBING">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_SCRIBING),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Gifted Scribe.</i></b> When you make an Intelligence (History) check or an ability check using Calligrapher's Supplies, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Scribe's Insight.</i></b> You know the <i>Message</i> cantrip. You also always have the <i>Comprehend Languages</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Magic Mouth</i> spell prepared and can cast it the same way.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Scribing Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Scribing Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Command, Illusory Script</i></td></tr>
+				<tr><td>2</td><td><i>Animal Messenger, Silence</i></td></tr>
+				<tr><td>3</td><td><i>Sending, Tongues</i></td></tr>
+				<tr><td>4</td><td><i>Arcane Eye, Confusion</i></td></tr>
+				<tr><td>5</td><td><i>Dream</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_MESSAGE" />
+				<div element="ID_WOTC_PHB24_SPELL_COMPREHEND_LANGUAGES" />
+				<div element="ID_WOTC_PHB24_SPELL_MAGIC_MOUTH" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_COMMAND</extend>
+			<extend>ID_PHB_SPELL_ILLUSORY_SCRIPT</extend>
+			<extend>ID_PHB_SPELL_ANIMAL_MESSENGER</extend>
+			<extend>ID_PHB_SPELL_SILENCE</extend>
+			<extend>ID_PHB_SPELL_SENDING</extend>
+			<extend>ID_PHB_SPELL_TONGUES</extend>
+			<extend>ID_PHB_SPELL_ARCANE_EYE</extend>
+			<extend>ID_PHB_SPELL_CONFUSION</extend>
+			<extend>ID_PHB_SPELL_DREAM</extend>
+			<extend>ID_WOTC_PHB24_SPELL_COMMAND</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ILLUSORY_SCRIPT</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ANIMAL_MESSENGER</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SILENCE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SENDING</extend>
+			<extend>ID_WOTC_PHB24_SPELL_TONGUES</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ARCANE_EYE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CONFUSION</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DREAM</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_GIFTED_SCRIBE" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MESSAGE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMPREHEND_LANGUAGES" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_MOUTH" level="3" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Scribing)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Gifted Scribe" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_GIFTED_SCRIBE">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (History) check or an ability check using Calligrapher's Supplies, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Gifted Scribe">
+			<description>When you make an Intelligence (History) check or an ability check using Calligrapher's Supplies, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Message</i> cantrip. You also always have the <i>Comprehend Languages</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Magic Mouth</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Scribe's Insight" usage="1/Long Rest">
+			<description>You know the Message cantrip. You always have the Comprehend Languages spell prepared. You can cast Comprehend Languages once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</description>
+			<description level="3">You know the Message cantrip. You always have the Comprehend Languages and Magic Mouth spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Message</i> cantrip. You also always have the <i>Comprehend Languages</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for this spell.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Magic Mouth</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Scribe's Insight" usage="1/Long Rest">
+			<description>You know the Message cantrip. You always have the Comprehend Languages spell prepared. You can cast Comprehend Languages once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for this spell.</description>
+			<description level="3">You know the Message cantrip. You always have the Comprehend Languages and Magic Mouth spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SCRIBES_INSIGHT_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Message</i> cantrip. You also always have the <i>Comprehend Languages</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for this spell.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Magic Mouth</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Scribe's Insight" usage="1/Long Rest">
+			<description>You know the Message cantrip. You always have the Comprehend Languages spell prepared. You can cast Comprehend Languages once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for this spell.</description>
+			<description level="3">You know the Message cantrip. You always have the Comprehend Languages and Magic Mouth spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SCRIBING_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Scribing Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Scribing Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Command, Illusory Script</i></td></tr>
+				<tr><td>2</td><td><i>Animal Messenger, Silence</i></td></tr>
+				<tr><td>3</td><td><i>Sending, Tongues</i></td></tr>
+				<tr><td>4</td><td><i>Arcane Eye, Confusion</i></td></tr>
+				<tr><td>5</td><td><i>Dream</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Scribing Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Sentinel" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_SENTINEL">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_SENTINEL),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Sentinel's Intuition.</i></b> When you make a Wisdom (Insight or Perception) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Guardian's Shield.</i></b> You always have the <i>Shield</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).</p>
+			<p class="indent"><b><i>Vigilant Guardian.</i></b> When a creature you can see within 5 feet of you is hit by an attack roll, you can take a Reaction to swap places with that creature, and you are hit by the attack instead. You can use this feature a number of times equal to your Proficiency Bonus and regain all expended uses when you finish a Long Rest.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Sentinel Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Sentinel Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Compelled Duel, Shield of Faith</i></td></tr>
+				<tr><td>2</td><td><i>Warding Bond, Zone of Truth</i></td></tr>
+				<tr><td>3</td><td><i>Counterspell, Protection from Energy</i></td></tr>
+				<tr><td>4</td><td><i>Death Ward, Guardian of Faith</i></td></tr>
+				<tr><td>5</td><td><i>Bigby's Hand</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_SHIELD" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_COMPELLED_DUEL</extend>
+			<extend>ID_PHB_SPELL_SHIELD_OF_FAITH</extend>
+			<extend>ID_PHB_SPELL_WARDING_BOND</extend>
+			<extend>ID_PHB_SPELL_ZONE_OF_TRUTH</extend>
+			<extend>ID_PHB_SPELL_COUNTERSPELL</extend>
+			<extend>ID_PHB_SPELL_PROTECTION_FROM_ENERGY</extend>
+			<extend>ID_PHB_SPELL_DEATH_WARD</extend>
+			<extend>ID_PHB_SPELL_GUARDIAN_OF_FAITH</extend>
+			<extend>ID_PHB_SPELL_BIGBYS_HAND</extend>
+			<extend>ID_WOTC_PHB24_SPELL_COMPELLED_DUEL</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SHIELD_OF_FAITH</extend>
+			<extend>ID_WOTC_PHB24_SPELL_WARDING_BOND</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ZONE_OF_TRUTH</extend>
+			<extend>ID_WOTC_PHB24_SPELL_COUNTERSPELL</extend>
+			<extend>ID_WOTC_PHB24_SPELL_PROTECTION_FROM_ENERGY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DEATH_WARD</extend>
+			<extend>ID_WOTC_PHB24_SPELL_GUARDIAN_OF_FAITH</extend>
+			<extend>ID_WOTC_PHB24_SPELL_BIGBYS_HAND</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_SENTINELS_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_VIGILANT_GUARDIAN" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Sentinel)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Sentinel's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_SENTINELS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Wisdom (Insight or Perception) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Sentinel's Intuition">
+			<description>When you make a Wisdom (Insight or Perception) check, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Vigilant Guardian" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_VIGILANT_GUARDIAN">
+		<compendium display="false" />
+		<description>
+			<p>When a creature you can see within 5 feet of you is hit by an attack roll, you can take a Reaction to swap places with that creature, and you are hit by the attack instead. You can use this feature a number of times equal to your Proficiency Bonus and regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Vigilant Guardian">
+			<description>When a creature you can see within 5 feet of you is hit by an attack roll, you can take a Reaction to swap places with that creature, and you are hit by the attack instead. You can use this feature {{proficiency}} times, and regain all expended uses when you finish a Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Shield</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet alt="Guardian's Shield" usage="1/Long Rest">
+			<description>You always have the Shield spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence is your spellcasting ability for this spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Shield</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Wisdom is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet alt="Guardian's Shield" usage="1/Long Rest">
+			<description>You always have the Shield spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Wisdom is your spellcasting ability for this spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_GUARDIANS_SHIELD_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Shield</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Charisma is your spellcasting ability for this spell.</p>
+		</description>
+		<sheet alt="Guardian's Shield" usage="1/Long Rest">
+			<description>You always have the Shield spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Charisma is your spellcasting ability for this spell.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SENTINEL_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Sentinel Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Sentinel Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Compelled Duel, Shield of Faith</i></td></tr>
+				<tr><td>2</td><td><i>Warding Bond, Zone of Truth</i></td></tr>
+				<tr><td>3</td><td><i>Counterspell, Protection from Energy</i></td></tr>
+				<tr><td>4</td><td><i>Death Ward, Guardian of Faith</i></td></tr>
+				<tr><td>5</td><td><i>Bigby's Hand</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Sentinel Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Shadow" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_SHADOW">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_SHADOW),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Cunning Intuition.</i></b> When you make a Dexterity (Stealth) or Charisma (Performance) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Shape Shadows.</i></b> You know the <i>Minor Illusion</i> cantrip. You also always have the <i>Invisibility</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Shadow Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Shadow Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Disguise Self, Silent Image</i></td></tr>
+				<tr><td>2</td><td><i>Darkness, Pass without Trace</i></td></tr>
+				<tr><td>3</td><td><i>Clairvoyance, Major Image</i></td></tr>
+				<tr><td>4</td><td><i>Greater Invisibility, Hallucinatory Terrain</i></td></tr>
+				<tr><td>5</td><td><i>Mislead</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" />
+				<div element="ID_WOTC_PHB24_SPELL_INVISIBILITY" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_DISGUISE_SELF</extend>
+			<extend>ID_PHB_SPELL_SILENT_IMAGE</extend>
+			<extend>ID_PHB_SPELL_DARKNESS</extend>
+			<extend>ID_PHB_SPELL_PASS_WITHOUT_TRACE</extend>
+			<extend>ID_PHB_SPELL_CLAIRVOYANCE</extend>
+			<extend>ID_PHB_SPELL_MAJOR_IMAGE</extend>
+			<extend>ID_PHB_SPELL_GREATER_INVISIBILITY</extend>
+			<extend>ID_PHB_SPELL_HALLUCINATORY_TERRAIN</extend>
+			<extend>ID_PHB_SPELL_MISLEAD</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DISGUISE_SELF</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SILENT_IMAGE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_DARKNESS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CLAIRVOYANCE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_MAJOR_IMAGE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_GREATER_INVISIBILITY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_HALLUCINATORY_TERRAIN</extend>
+			<extend>ID_WOTC_PHB24_SPELL_MISLEAD</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_CUNNING_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Shadow)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Cunning Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_CUNNING_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Dexterity (Stealth) or Charisma (Performance) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Cunning Intuition">
+			<description>When you make a Dexterity (Stealth) or Charisma (Performance) check, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Minor Illusion</i> cantrip. You also always have the <i>Invisibility</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Shape Shadows" usage="1/Long Rest">
+			<description>You know the Minor Illusion cantrip. You always have the Invisibility spell prepared. You can cast Invisibility once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Minor Illusion</i> cantrip. You also always have the <i>Invisibility</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Shape Shadows" usage="1/Long Rest">
+			<description>You know the Minor Illusion cantrip. You always have the Invisibility spell prepared. You can cast Invisibility once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SHAPE_SHADOWS_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Minor Illusion</i> cantrip. You also always have the <i>Invisibility</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Shape Shadows" usage="1/Long Rest">
+			<description>You know the Minor Illusion cantrip. You always have the Invisibility spell prepared. You can cast Invisibility once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_SHADOW_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Shadow Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Shadow Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Disguise Self, Silent Image</i></td></tr>
+				<tr><td>2</td><td><i>Darkness, Pass without Trace</i></td></tr>
+				<tr><td>3</td><td><i>Clairvoyance, Major Image</i></td></tr>
+				<tr><td>4</td><td><i>Greater Invisibility, Hallucinatory Terrain</i></td></tr>
+				<tr><td>5</td><td><i>Mislead</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Shadow Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Storm" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_STORM">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_STORM),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Windwright's Intuition.</i></b> When you make a Dexterity (Acrobatics) check or an ability check using Navigator's Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Storm's Boon.</i></b> You have Resistance to Lightning damage.</p>
+			<p class="indent"><b><i>Storm Magic.</i></b> You know the <i>Thunderclap</i> cantrip. When you reach character level 3, you also always have the <i>Gust of Wind</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Storm Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Storm Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Feather Fall, Fog Cloud</i></td></tr>
+				<tr><td>2</td><td><i>Levitate, Shatter</i></td></tr>
+				<tr><td>3</td><td><i>Sleet Storm, Wind Wall</i></td></tr>
+				<tr><td>4</td><td><i>Conjure Minor Elementals, Control Water</i></td></tr>
+				<tr><td>5</td><td><i>Conjure Elemental</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_THUNDERCLAP" />
+				<div element="ID_WOTC_PHB24_SPELL_GUST_OF_WIND" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_FEATHER_FALL</extend>
+			<extend>ID_PHB_SPELL_FOG_CLOUD</extend>
+			<extend>ID_PHB_SPELL_LEVITATE</extend>
+			<extend>ID_PHB_SPELL_SHATTER</extend>
+			<extend>ID_PHB_SPELL_SLEET_STORM</extend>
+			<extend>ID_PHB_SPELL_WIND_WALL</extend>
+			<extend>ID_PHB_SPELL_CONJURE_MINOR_ELEMENTALS</extend>
+			<extend>ID_PHB_SPELL_CONTROL_WATER</extend>
+			<extend>ID_PHB_SPELL_CONJURE_ELEMENTAL</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FEATHER_FALL</extend>
+			<extend>ID_WOTC_PHB24_SPELL_FOG_CLOUD</extend>
+			<extend>ID_WOTC_PHB24_SPELL_LEVITATE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SHATTER</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SLEET_STORM</extend>
+			<extend>ID_WOTC_PHB24_SPELL_WIND_WALL</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CONJURE_MINOR_ELEMENTALS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CONTROL_WATER</extend>
+			<extend>ID_WOTC_PHB24_SPELL_CONJURE_ELEMENTAL</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_WINDWRIGHTS_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORMS_BOON" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_THUNDERCLAP" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUST_OF_WIND" level="3" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Storm)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Windwright's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_WINDWRIGHTS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make a Dexterity (Acrobatics) check or an ability check using Navigator's Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Windwright's Intuition">
+			<description>When you make a Dexterity (Acrobatics) check or an ability check using Navigator's Tools, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Storm's Boon" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORMS_BOON">
+		<compendium display="false" />
+		<description>
+			<p>You have Resistance to Lightning damage.</p>
+		</description>
+		<sheet display="false">
+			<description>You have Resistance to Lightning damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+		</rules>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Thunderclap</i> cantrip. When you reach character level 3, you also always have the <i>Gust of Wind</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Storm Magic" usage="1/Long Rest">
+			<description>You know the Thunderclap cantrip. Intelligence is your spellcasting ability for this spell.</description>
+			<description level="3">You know the Thunderclap cantrip. You always have the Gust of Wind spell prepared. You can cast Gust of Wind once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Thunderclap</i> cantrip. When you reach character level 3, you also always have the <i>Gust of Wind</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Storm Magic" usage="1/Long Rest">
+			<description>You know the Thunderclap cantrip. Wisdom is your spellcasting ability for this spell.</description>
+			<description level="3">You know the Thunderclap cantrip. You always have the Gust of Wind spell prepared. You can cast Gust of Wind once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_STORM_MAGIC_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You know the <i>Thunderclap</i> cantrip. When you reach character level 3, you also always have the <i>Gust of Wind</i> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet alt="Storm Magic" usage="1/Long Rest">
+			<description>You know the Thunderclap cantrip. Charisma is your spellcasting ability for this spell.</description>
+			<description level="3">You know the Thunderclap cantrip. You always have the Gust of Wind spell prepared. You can cast Gust of Wind once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_STORM_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Storm Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Storm Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Feather Fall, Fog Cloud</i></td></tr>
+				<tr><td>2</td><td><i>Levitate, Shatter</i></td></tr>
+				<tr><td>3</td><td><i>Sleet Storm, Wind Wall</i></td></tr>
+				<tr><td>4</td><td><i>Conjure Minor Elementals, Control Water</i></td></tr>
+				<tr><td>5</td><td><i>Conjure Elemental</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Storm Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
+		</sheet>
+	</element>
+
+	<element name="Mark of Warding" type="Feat" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_MARK_OF_WARDING">
+		<prerequisite>Eberron Campaign, can't have another Dragonmark Feat</prerequisite>
+		<requirements>(!ID_ASRS_GRANTS_DRAGONMARK_FEAT||ID_ASRS_FEAT_MARK_OF_WARDING),!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
+		<description>
+			<p class="flavor">Dragonmark Feat (Prerequisite: Eberron Campaign, can't have another Dragonmark Feat)</p>
+			<p>You gain the following benefits.</p>
+			<p class="indent"><b><i>Warder's Intuition.</i></b> When you make an Intelligence (Investigation) check or an ability check using Thieves' Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
+			<p class="indent"><b><i>Wards and Seals.</i></b> You always have the <i>Alarm</i> and <i>Mage Armor</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Arcane Lock</i> spell prepared and can cast it the same way.</p>
+			<p class="indent"><b><i>Spells of the Mark.</i></b> If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Warding Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Warding Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Armor of Agathys, Sanctuary</i></td></tr>
+				<tr><td>2</td><td><i>Knock, Nystul's Magic Aura</i></td></tr>
+				<tr><td>3</td><td><i>Glyph of Warding, Magic Circle</i></td></tr>
+				<tr><td>4</td><td><i>Leomund's Secret Chest, Mordenkainen's Faithful Hound</i></td></tr>
+				<tr><td>5</td><td><i>Antilife Shell</i></td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_WOTC_PHB24_SPELL_ALARM" />
+				<div element="ID_WOTC_PHB24_SPELL_MAGE_ARMOR" />
+				<div element="ID_WOTC_PHB24_SPELL_ARCANE_LOCK" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<spellcasting all="true" extend="true">
+			<extend>ID_PHB_SPELL_ARMOR_OF_AGATHYS</extend>
+			<extend>ID_PHB_SPELL_SANCTUARY</extend>
+			<extend>ID_PHB_SPELL_KNOCK</extend>
+			<extend>ID_PHB_SPELL_NYSTULS_MAGIC_AURA</extend>
+			<extend>ID_PHB_SPELL_GLYPH_OF_WARDING</extend>
+			<extend>ID_PHB_SPELL_MAGIC_CIRCLE</extend>
+			<extend>ID_PHB_SPELL_LEOMUNDS_SECRET_CHEST</extend>
+			<extend>ID_PHB_SPELL_MORDENKAINENS_FAITHFUL_HOUND</extend>
+			<extend>ID_PHB_SPELL_ANTILIFE_SHELL</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ARMOR_OF_AGATHYS</extend>
+			<extend>ID_WOTC_PHB24_SPELL_SANCTUARY</extend>
+			<extend>ID_WOTC_PHB24_SPELL_KNOCK</extend>
+			<extend>ID_WOTC_PHB24_SPELL_NYSTULS_MAGIC_AURA</extend>
+			<extend>ID_WOTC_PHB24_SPELL_GLYPH_OF_WARDING</extend>
+			<extend>ID_WOTC_PHB24_SPELL_MAGIC_CIRCLE</extend>
+			<extend>ID_WOTC_PHB24_SPELL_LEOMUNDS_SECRET_CHEST</extend>
+			<extend>ID_WOTC_PHB24_SPELL_MORDENKAINENS_FAITHFUL_HOUND</extend>
+			<extend>ID_WOTC_PHB24_SPELL_ANTILIFE_SHELL</extend>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_ASRS_GRANTS_DRAGONMARK_FEAT" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDERS_INTUITION" />
+			<grant type="Feat Feature" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_SPELLS_OF_THE_MARK" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ALARM" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGE_ARMOR" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_LOCK" level="3" />
+			<select type="Feat Feature" name="Spellcasting Ability (Mark of Warding)" supports="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_INTELLIGENCE|ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_WISDOM|ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Warder's Intuition" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDERS_INTUITION">
+		<compendium display="false" />
+		<description>
+			<p>When you make an Intelligence (Investigation) check or an ability check using Thieves' Tools, you can roll 1d4 and add the number rolled to the ability check.</p>
+		</description>
+		<sheet alt="Warder's Intuition">
+			<description>When you make an Intelligence (Investigation) check or an ability check using Thieves' Tools, you can roll 1d4 and add the number rolled to the ability check.</description>
+		</sheet>
+	</element>
+
+	<element name="Intelligence" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Alarm</i> and <i>Mage Armor</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Arcane Lock</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Wards and Seals" usage="1/Long Rest each">
+			<description>You always have the Alarm and Mage Armor spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Alarm, Mage Armor, and Arcane Lock spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Wisdom" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Alarm</i> and <i>Mage Armor</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Arcane Lock</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Wards and Seals" usage="1/Long Rest each">
+			<description>You always have the Alarm and Mage Armor spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Alarm, Mage Armor, and Arcane Lock spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Charisma" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_WARDS_AND_SEALS_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>You always have the <i>Alarm</i> and <i>Mage Armor</i> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</p>
+			<p class="indent">When you reach character level 3, you also always have the <i>Arcane Lock</i> spell prepared and can cast it the same way.</p>
+		</description>
+		<sheet alt="Wards and Seals" usage="1/Long Rest each">
+			<description>You always have the Alarm and Mage Armor spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+			<description level="3">You always have the Alarm, Mage Armor, and Arcane Lock spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Spells of the Mark" type="Feat Feature" source="ASRS Eberron - Forge of the Artificer" id="ID_ASRS_FEAT_FEATURE_MARK_OF_WARDING_SPELLS_OF_THE_MARK">
+		<compendium display="false" />
+		<description>
+			<p>If you have the Spellcasting or Pact Magic feature, the spells on the Mark of Warding Spells table are added to that feature's spell list.</p>
+			<h5>Mark of Warding Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td><i>Armor of Agathys, Sanctuary</i></td></tr>
+				<tr><td>2</td><td><i>Knock, Nystul's Magic Aura</i></td></tr>
+				<tr><td>3</td><td><i>Glyph of Warding, Magic Circle</i></td></tr>
+				<tr><td>4</td><td><i>Leomund's Secret Chest, Mordenkainen's Faithful Hound</i></td></tr>
+				<tr><td>5</td><td><i>Antilife Shell</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells on the Mark of Warding Spells table are added to your Spellcasting or Pact Magic feature's spell list.</description>
 		</sheet>
 	</element>
 
