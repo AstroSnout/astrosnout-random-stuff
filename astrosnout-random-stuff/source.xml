@@ -3,7 +3,7 @@
   <info>
     <name>Source</name>
     <update version="0.1.0">
-      <file name="source.xml" url="https://raw.githubusercontent.com/AstroSnout/aurora-random-stuff/main/astrosnout-random-stuff/source.xml" />
+      <file name="source.xml" url="https://raw.githubusercontent.com/AstroSnout/astrosnout-random-stuff/main/astrosnout-random-stuff/source.xml" />
     </update>
   </info>
 	<element name="ASRS Eberron - Forge of the Artificer" type="Source" source="Core" id="ID_ASRS_SOURCE_EBERRON_FORGE_OF_THE_ARTIFICER">
